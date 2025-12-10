@@ -1,0 +1,330 @@
+{
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "docs": "Docs",
+    "contact": "Contact",
+    "login": "Sign In",
+    "getStarted": "Get Started"
+  },
+  "home": {
+    "hero": {
+      "title": {
+        "line1": "AI-Powered",
+        "highlight": "Invoice Processing",
+        "line2": "for ContPAQi"
+      },
+      "subtitle": "Automate your Mexican accounting workflow. Extract data from PDF invoices, validate RFC and CFDI compliance, and post directly to ContPAQi with AI assistance.",
+      "cta": {
+        "primary": "Get Started",
+        "secondary": "Learn More"
+      },
+      "badges": {
+        "noCloud": "100% Local Processing",
+        "mexicanCompliant": "Mexican Invoice Compliant"
+      },
+      "demoPlaceholder": "App Demo Screenshot"
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Three simple steps to automate your invoice processing",
+      "steps": {
+        "upload": {
+          "title": "Upload Invoice",
+          "description": "Drop your PDF invoice or scan directly from your device"
+        },
+        "extract": {
+          "title": "AI Extraction",
+          "description": "Our AI extracts all data including tables, RFC, amounts, and validates CFDI"
+        },
+        "post": {
+          "title": "Post to ContPAQi",
+          "description": "Review the extracted data and post directly to your ContPAQi system"
+        }
+      }
+    },
+    "features": {
+      "title": "Powerful Features",
+      "subtitle": "Everything you need to streamline your accounting workflow",
+      "items": {
+        "ai": {
+          "title": "AI-Powered OCR",
+          "description": "Advanced machine learning models extract data with high accuracy"
+        },
+        "tables": {
+          "title": "Table Detection",
+          "description": "Automatically detect and extract line items from invoice tables"
+        },
+        "review": {
+          "title": "Human-in-the-Loop",
+          "description": "Review and correct extractions with confidence highlighting"
+        },
+        "security": {
+          "title": "Local Processing",
+          "description": "All data stays on your machine - nothing sent to the cloud"
+        },
+        "cfdi": {
+          "title": "CFDI Compliance",
+          "description": "Validate Mexican electronic invoices with RFC verification"
+        },
+        "integration": {
+          "title": "Direct Integration",
+          "description": "Post entries directly to ContPAQi through official SDK"
+        }
+      },
+      "cta": "View All Features"
+    },
+    "cta": {
+      "title": "Ready to Automate Your Accounting?",
+      "subtitle": "Start processing invoices with AI today. No credit card required for trial.",
+      "button": "Get Started Free"
+    }
+  },
+  "features": {
+    "hero": {
+      "title": "Powerful Features for Modern Accounting",
+      "subtitle": "Discover how ContPAQi AI Bridge transforms your invoice processing workflow with cutting-edge AI technology."
+    },
+    "main": {
+      "ai": {
+        "title": "AI-Powered Data Extraction",
+        "description": "Our advanced machine learning models, including LayoutLMv3 and TATR, accurately extract data from any invoice format.",
+        "details": {
+          "layoutlm": "LayoutLMv3 for document understanding",
+          "tatr": "Table Transformer for line item extraction",
+          "confidence": "Confidence scoring for every field",
+          "learning": "Continuous improvement from corrections"
+        }
+      },
+      "tables": {
+        "title": "Intelligent Table Detection",
+        "description": "Automatically detect and extract structured data from invoice tables, regardless of format or layout.",
+        "details": {
+          "detection": "Automatic table boundary detection",
+          "structure": "Row and column structure recognition",
+          "multipage": "Multi-page table support",
+          "export": "Export to structured formats"
+        }
+      },
+      "review": {
+        "title": "Human-in-the-Loop Review",
+        "description": "Review AI extractions with our intuitive split-screen interface. See exactly what was extracted and make corrections easily.",
+        "details": {
+          "split": "Side-by-side PDF and data view",
+          "highlight": "Confidence-based field highlighting",
+          "edit": "Inline editing with validation",
+          "batch": "Batch processing for multiple invoices"
+        }
+      },
+      "cfdi": {
+        "title": "Mexican Invoice Compliance",
+        "description": "Full support for Mexican CFDI electronic invoices with RFC validation and IVA calculation.",
+        "details": {
+          "rfc": "RFC format validation",
+          "validation": "CFDI structure verification",
+          "iva": "Automatic IVA calculation",
+          "uuid": "UUID fiscal folio tracking"
+        }
+      },
+      "integration": {
+        "title": "ContPAQi Integration",
+        "description": "Direct integration with ContPAQi accounting system through the official SDK.",
+        "details": {
+          "sdk": "Official ContPAQi SDK integration",
+          "auto": "Automatic entry creation",
+          "validation": "Pre-posting validation",
+          "rollback": "Transaction rollback support"
+        }
+      },
+      "security": {
+        "title": "Enterprise Security",
+        "description": "Your data never leaves your machine. All processing happens locally with hardware-locked licensing.",
+        "details": {
+          "local": "100% local data processing",
+          "hardware": "Hardware-locked license protection",
+          "encrypted": "Encrypted configuration storage",
+          "audit": "Complete audit trail"
+        }
+      }
+    },
+    "specs": {
+      "title": "Technical Specifications",
+      "architecture": {
+        "title": "Architecture",
+        "docker": "Docker containerized AI models",
+        "net": ".NET 6 Windows Bridge service",
+        "electron": "Electron + React desktop app",
+        "rest": "RESTful API communication"
+      },
+      "security": {
+        "title": "Security",
+        "processing": "Local-only data processing",
+        "licensing": "Hardware-bound licensing",
+        "encryption": "AES-256 encryption",
+        "obfuscation": "Code obfuscation"
+      },
+      "compatibility": {
+        "title": "Compatibility",
+        "windows": "Windows 10/11 (64-bit)",
+        "contpaqi": "ContPAQi Comercial/Contabilidad",
+        "pdf": "PDF, TIFF, JPG, PNG formats",
+        "cfdi": "CFDI 3.3 and 4.0"
+      }
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Simple, Transparent Pricing",
+      "subtitle": "Choose the plan that fits your business needs. All plans include core AI features."
+    },
+    "popular": "Most Popular",
+    "month": "month",
+    "year": "year",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "description": "Perfect for small businesses",
+        "yearlyDiscount": "Save $98/year",
+        "features": {
+          "machines": "1 machine activation",
+          "invoices": "100 invoices/month",
+          "ai": "Full AI extraction",
+          "support": "Email support",
+          "updates": "Software updates",
+          "api": "API access",
+          "priority": "Priority support"
+        },
+        "cta": "Get Started"
+      },
+      "professional": {
+        "name": "Professional",
+        "description": "For growing teams",
+        "yearlyDiscount": "Save $198/year",
+        "features": {
+          "machines": "3 machine activations",
+          "invoices": "Unlimited invoices",
+          "ai": "Full AI extraction",
+          "support": "Email support",
+          "updates": "Software updates",
+          "api": "API access",
+          "priority": "Priority support"
+        },
+        "cta": "Get Started"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "For large organizations",
+        "price": "Contact Us",
+        "features": {
+          "machines": "Unlimited machines",
+          "invoices": "Unlimited invoices",
+          "ai": "Full AI extraction",
+          "support": "24/7 phone support",
+          "sla": "99.9% SLA guarantee",
+          "custom": "Custom integration",
+          "onboarding": "Dedicated onboarding"
+        },
+        "cta": "Contact Sales"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "license": {
+        "question": "How does licensing work?",
+        "answer": "Each license is tied to specific machines using hardware fingerprinting. You can activate and deactivate machines from your customer portal."
+      },
+      "machines": {
+        "question": "What counts as a machine?",
+        "answer": "A machine is any Windows computer where you install and activate the software. Virtual machines and physical computers each count as one machine."
+      },
+      "invoices": {
+        "question": "What happens if I exceed my invoice limit?",
+        "answer": "On the Starter plan, you'll receive a notification when approaching your limit. You can upgrade at any time to continue processing."
+      },
+      "refund": {
+        "question": "Is there a refund policy?",
+        "answer": "Yes, we offer a 30-day money-back guarantee. If you're not satisfied, contact support for a full refund."
+      },
+      "upgrade": {
+        "question": "Can I upgrade my plan?",
+        "answer": "Yes, you can upgrade at any time from your customer portal. The price difference will be prorated."
+      }
+    },
+    "cta": {
+      "title": "Need a Custom Solution?",
+      "subtitle": "Contact our sales team for enterprise pricing and custom integrations.",
+      "button": "Contact Sales"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Get in Touch",
+      "subtitle": "Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible."
+    },
+    "info": {
+      "email": {
+        "title": "Email",
+        "value": "contact@contpaqi-ai-bridge.com"
+      },
+      "support": {
+        "title": "Support",
+        "value": "support@contpaqi-ai-bridge.com"
+      },
+      "enterprise": {
+        "title": "Enterprise Sales",
+        "value": "sales@contpaqi-ai-bridge.com"
+      }
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "company": "Company (optional)",
+      "companyPlaceholder": "Your company name",
+      "subject": "Subject",
+      "subjectPlaceholder": "Select a subject",
+      "subjects": {
+        "sales": "Sales inquiry",
+        "support": "Technical support",
+        "enterprise": "Enterprise solutions",
+        "other": "Other"
+      },
+      "message": "Message",
+      "messagePlaceholder": "How can we help you?",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": {
+        "title": "Message Sent!",
+        "message": "Thank you for reaching out. We'll get back to you within 24 hours."
+      }
+    }
+  },
+  "footer": {
+    "description": "AI-powered invoice processing for ContPAQi. Automate your Mexican accounting workflow.",
+    "sections": {
+      "product": "Product",
+      "support": "Support",
+      "company": "Company",
+      "legal": "Legal"
+    },
+    "links": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "download": "Download",
+      "changelog": "Changelog",
+      "docs": "Documentation",
+      "guides": "Guides",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "about": "About Us",
+      "blog": "Blog",
+      "careers": "Careers",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "license": "License Agreement"
+    },
+    "rights": "All rights reserved.",
+    "madeWith": "Made with ❤️ for Mexican businesses"
+  }
+}

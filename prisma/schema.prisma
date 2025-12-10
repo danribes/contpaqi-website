@@ -1,0 +1,229 @@
+// ===========================================
+// ContPAQi AI Bridge Website - Database Schema
+// ===========================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// -----------------
+// Authentication
+// -----------------
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  emailVerified DateTime?
+  image         String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Relations
+  accounts  Account[]
+  sessions  Session[]
+  licenses  License[]
+  orders    Order[]
+
+  @@map("users")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("verification_tokens")
+}
+
+// -----------------
+// Licensing
+// -----------------
+
+enum LicenseTier {
+  STARTER
+  PROFESSIONAL
+  ENTERPRISE
+}
+
+enum LicenseStatus {
+  ACTIVE
+  EXPIRED
+  REVOKED
+  PENDING
+}
+
+model License {
+  id              String        @id @default(cuid())
+  key             String        @unique
+  userId          String
+  tier            LicenseTier
+  status          LicenseStatus @default(PENDING)
+  maxMachines     Int           @default(1)
+  invoicesPerMonth Int?         // null = unlimited
+  expiresAt       DateTime?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  activatedAt     DateTime?
+
+  // Relations
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  machines  Machine[]
+  order     Order?     @relation(fields: [orderId], references: [id])
+  orderId   String?    @unique
+
+  @@index([key])
+  @@index([userId])
+  @@map("licenses")
+}
+
+model Machine {
+  id          String   @id @default(cuid())
+  licenseId   String
+  fingerprint String   // Hardware fingerprint from the app
+  name        String?  // Friendly name (e.g., "Office PC")
+  lastSeenAt  DateTime @default(now())
+  createdAt   DateTime @default(now())
+
+  license License @relation(fields: [licenseId], references: [id], onDelete: Cascade)
+
+  @@unique([licenseId, fingerprint])
+  @@index([fingerprint])
+  @@map("machines")
+}
+
+// -----------------
+// Orders & Payments
+// -----------------
+
+enum OrderStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  REFUNDED
+}
+
+model Order {
+  id                String      @id @default(cuid())
+  userId            String
+  status            OrderStatus @default(PENDING)
+  amount            Int         // Amount in cents
+  currency          String      @default("USD")
+  tier              LicenseTier
+  billingPeriod     String      // "monthly" or "yearly"
+  stripeSessionId   String?     @unique
+  stripePaymentId   String?
+  stripeInvoiceId   String?
+  stripeInvoiceUrl  String?
+  createdAt         DateTime    @default(now())
+  updatedAt         DateTime    @updatedAt
+  completedAt       DateTime?
+
+  // Relations
+  user    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  license License?
+
+  @@index([userId])
+  @@index([stripeSessionId])
+  @@map("orders")
+}
+
+// -----------------
+// Downloads
+// -----------------
+
+model Download {
+  id          String   @id @default(cuid())
+  version     String
+  filename    String
+  size        Int      // File size in bytes
+  checksum    String   // SHA-256 hash
+  releaseDate DateTime
+  changelog   String?  @db.Text
+  isLatest    Boolean  @default(false)
+  downloadUrl String?  // Signed URL or path
+  createdAt   DateTime @default(now())
+
+  // Track download events
+  events DownloadEvent[]
+
+  @@index([version])
+  @@map("downloads")
+}
+
+model DownloadEvent {
+  id         String   @id @default(cuid())
+  downloadId String
+  licenseKey String?
+  ipAddress  String?
+  userAgent  String?
+  createdAt  DateTime @default(now())
+
+  download Download @relation(fields: [downloadId], references: [id], onDelete: Cascade)
+
+  @@index([downloadId])
+  @@index([licenseKey])
+  @@map("download_events")
+}
+
+// -----------------
+// Contact/Support
+// -----------------
+
+enum TicketStatus {
+  OPEN
+  IN_PROGRESS
+  RESOLVED
+  CLOSED
+}
+
+model ContactSubmission {
+  id        String       @id @default(cuid())
+  name      String
+  email     String
+  company   String?
+  subject   String
+  message   String       @db.Text
+  status    TicketStatus @default(OPEN)
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+
+  @@map("contact_submissions")
+}

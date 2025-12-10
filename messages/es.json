@@ -1,0 +1,330 @@
+{
+  "nav": {
+    "features": "Características",
+    "pricing": "Precios",
+    "docs": "Documentación",
+    "contact": "Contacto",
+    "login": "Iniciar Sesión",
+    "getStarted": "Comenzar"
+  },
+  "home": {
+    "hero": {
+      "title": {
+        "line1": "Procesamiento de",
+        "highlight": "Facturas con IA",
+        "line2": "para ContPAQi"
+      },
+      "subtitle": "Automatiza tu flujo de trabajo contable mexicano. Extrae datos de facturas PDF, valida RFC y cumplimiento CFDI, y publica directamente en ContPAQi con asistencia de IA.",
+      "cta": {
+        "primary": "Comenzar",
+        "secondary": "Saber Más"
+      },
+      "badges": {
+        "noCloud": "100% Procesamiento Local",
+        "mexicanCompliant": "Cumple con Facturas Mexicanas"
+      },
+      "demoPlaceholder": "Captura de Pantalla de la App"
+    },
+    "howItWorks": {
+      "title": "Cómo Funciona",
+      "subtitle": "Tres simples pasos para automatizar tu procesamiento de facturas",
+      "steps": {
+        "upload": {
+          "title": "Sube la Factura",
+          "description": "Arrastra tu factura PDF o escanea directamente desde tu dispositivo"
+        },
+        "extract": {
+          "title": "Extracción con IA",
+          "description": "Nuestra IA extrae todos los datos incluyendo tablas, RFC, montos y valida CFDI"
+        },
+        "post": {
+          "title": "Publica en ContPAQi",
+          "description": "Revisa los datos extraídos y publica directamente en tu sistema ContPAQi"
+        }
+      }
+    },
+    "features": {
+      "title": "Características Poderosas",
+      "subtitle": "Todo lo que necesitas para optimizar tu flujo de trabajo contable",
+      "items": {
+        "ai": {
+          "title": "OCR con IA",
+          "description": "Modelos avanzados de aprendizaje automático extraen datos con alta precisión"
+        },
+        "tables": {
+          "title": "Detección de Tablas",
+          "description": "Detecta y extrae automáticamente líneas de productos de las tablas de facturas"
+        },
+        "review": {
+          "title": "Revisión Humana",
+          "description": "Revisa y corrige extracciones con resaltado de confianza"
+        },
+        "security": {
+          "title": "Procesamiento Local",
+          "description": "Todos los datos permanecen en tu máquina - nada se envía a la nube"
+        },
+        "cfdi": {
+          "title": "Cumplimiento CFDI",
+          "description": "Valida facturas electrónicas mexicanas con verificación de RFC"
+        },
+        "integration": {
+          "title": "Integración Directa",
+          "description": "Publica pólizas directamente en ContPAQi a través del SDK oficial"
+        }
+      },
+      "cta": "Ver Todas las Características"
+    },
+    "cta": {
+      "title": "¿Listo para Automatizar tu Contabilidad?",
+      "subtitle": "Comienza a procesar facturas con IA hoy. No se requiere tarjeta de crédito para la prueba.",
+      "button": "Comenzar Gratis"
+    }
+  },
+  "features": {
+    "hero": {
+      "title": "Características Poderosas para la Contabilidad Moderna",
+      "subtitle": "Descubre cómo ContPAQi AI Bridge transforma tu flujo de procesamiento de facturas con tecnología de IA de vanguardia."
+    },
+    "main": {
+      "ai": {
+        "title": "Extracción de Datos con IA",
+        "description": "Nuestros modelos avanzados de aprendizaje automático, incluyendo LayoutLMv3 y TATR, extraen datos con precisión de cualquier formato de factura.",
+        "details": {
+          "layoutlm": "LayoutLMv3 para comprensión de documentos",
+          "tatr": "Table Transformer para extracción de líneas",
+          "confidence": "Puntuación de confianza para cada campo",
+          "learning": "Mejora continua a partir de correcciones"
+        }
+      },
+      "tables": {
+        "title": "Detección Inteligente de Tablas",
+        "description": "Detecta y extrae automáticamente datos estructurados de tablas de facturas, sin importar el formato o diseño.",
+        "details": {
+          "detection": "Detección automática de límites de tabla",
+          "structure": "Reconocimiento de estructura de filas y columnas",
+          "multipage": "Soporte para tablas de múltiples páginas",
+          "export": "Exportación a formatos estructurados"
+        }
+      },
+      "review": {
+        "title": "Revisión Humana en el Proceso",
+        "description": "Revisa las extracciones de IA con nuestra interfaz intuitiva de pantalla dividida. Ve exactamente qué se extrajo y haz correcciones fácilmente.",
+        "details": {
+          "split": "Vista lado a lado de PDF y datos",
+          "highlight": "Resaltado de campos basado en confianza",
+          "edit": "Edición en línea con validación",
+          "batch": "Procesamiento por lotes para múltiples facturas"
+        }
+      },
+      "cfdi": {
+        "title": "Cumplimiento de Facturas Mexicanas",
+        "description": "Soporte completo para facturas electrónicas CFDI mexicanas con validación de RFC y cálculo de IVA.",
+        "details": {
+          "rfc": "Validación de formato RFC",
+          "validation": "Verificación de estructura CFDI",
+          "iva": "Cálculo automático de IVA",
+          "uuid": "Seguimiento de folio fiscal UUID"
+        }
+      },
+      "integration": {
+        "title": "Integración con ContPAQi",
+        "description": "Integración directa con el sistema contable ContPAQi a través del SDK oficial.",
+        "details": {
+          "sdk": "Integración con SDK oficial de ContPAQi",
+          "auto": "Creación automática de pólizas",
+          "validation": "Validación previa a la publicación",
+          "rollback": "Soporte de reversión de transacciones"
+        }
+      },
+      "security": {
+        "title": "Seguridad Empresarial",
+        "description": "Tus datos nunca salen de tu máquina. Todo el procesamiento ocurre localmente con licenciamiento vinculado al hardware.",
+        "details": {
+          "local": "100% procesamiento local de datos",
+          "hardware": "Protección de licencia vinculada al hardware",
+          "encrypted": "Almacenamiento de configuración encriptado",
+          "audit": "Pista de auditoría completa"
+        }
+      }
+    },
+    "specs": {
+      "title": "Especificaciones Técnicas",
+      "architecture": {
+        "title": "Arquitectura",
+        "docker": "Modelos de IA en contenedores Docker",
+        "net": "Servicio Windows Bridge .NET 6",
+        "electron": "Aplicación de escritorio Electron + React",
+        "rest": "Comunicación API RESTful"
+      },
+      "security": {
+        "title": "Seguridad",
+        "processing": "Procesamiento solo local",
+        "licensing": "Licenciamiento vinculado al hardware",
+        "encryption": "Encriptación AES-256",
+        "obfuscation": "Ofuscación de código"
+      },
+      "compatibility": {
+        "title": "Compatibilidad",
+        "windows": "Windows 10/11 (64-bit)",
+        "contpaqi": "ContPAQi Comercial/Contabilidad",
+        "pdf": "Formatos PDF, TIFF, JPG, PNG",
+        "cfdi": "CFDI 3.3 y 4.0"
+      }
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Precios Simples y Transparentes",
+      "subtitle": "Elige el plan que se ajuste a las necesidades de tu negocio. Todos los planes incluyen características principales de IA."
+    },
+    "popular": "Más Popular",
+    "month": "mes",
+    "year": "año",
+    "plans": {
+      "starter": {
+        "name": "Inicial",
+        "description": "Perfecto para pequeños negocios",
+        "yearlyDiscount": "Ahorra $98/año",
+        "features": {
+          "machines": "1 activación de máquina",
+          "invoices": "100 facturas/mes",
+          "ai": "Extracción completa con IA",
+          "support": "Soporte por correo",
+          "updates": "Actualizaciones de software",
+          "api": "Acceso a API",
+          "priority": "Soporte prioritario"
+        },
+        "cta": "Comenzar"
+      },
+      "professional": {
+        "name": "Profesional",
+        "description": "Para equipos en crecimiento",
+        "yearlyDiscount": "Ahorra $198/año",
+        "features": {
+          "machines": "3 activaciones de máquina",
+          "invoices": "Facturas ilimitadas",
+          "ai": "Extracción completa con IA",
+          "support": "Soporte por correo",
+          "updates": "Actualizaciones de software",
+          "api": "Acceso a API",
+          "priority": "Soporte prioritario"
+        },
+        "cta": "Comenzar"
+      },
+      "enterprise": {
+        "name": "Empresarial",
+        "description": "Para grandes organizaciones",
+        "price": "Contáctenos",
+        "features": {
+          "machines": "Máquinas ilimitadas",
+          "invoices": "Facturas ilimitadas",
+          "ai": "Extracción completa con IA",
+          "support": "Soporte telefónico 24/7",
+          "sla": "Garantía SLA 99.9%",
+          "custom": "Integración personalizada",
+          "onboarding": "Incorporación dedicada"
+        },
+        "cta": "Contactar Ventas"
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "license": {
+        "question": "¿Cómo funciona el licenciamiento?",
+        "answer": "Cada licencia está vinculada a máquinas específicas usando huella digital de hardware. Puedes activar y desactivar máquinas desde tu portal de cliente."
+      },
+      "machines": {
+        "question": "¿Qué cuenta como una máquina?",
+        "answer": "Una máquina es cualquier computadora Windows donde instalas y activas el software. Las máquinas virtuales y computadoras físicas cuentan cada una como una máquina."
+      },
+      "invoices": {
+        "question": "¿Qué pasa si excedo mi límite de facturas?",
+        "answer": "En el plan Inicial, recibirás una notificación cuando te acerques a tu límite. Puedes actualizar en cualquier momento para continuar procesando."
+      },
+      "refund": {
+        "question": "¿Hay política de reembolso?",
+        "answer": "Sí, ofrecemos garantía de devolución de dinero de 30 días. Si no estás satisfecho, contacta a soporte para un reembolso completo."
+      },
+      "upgrade": {
+        "question": "¿Puedo actualizar mi plan?",
+        "answer": "Sí, puedes actualizar en cualquier momento desde tu portal de cliente. La diferencia de precio se prorrateará."
+      }
+    },
+    "cta": {
+      "title": "¿Necesitas una Solución Personalizada?",
+      "subtitle": "Contacta a nuestro equipo de ventas para precios empresariales e integraciones personalizadas.",
+      "button": "Contactar Ventas"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contáctanos",
+      "subtitle": "¿Tienes preguntas? Nos encantaría saber de ti. Envíanos un mensaje y responderemos lo antes posible."
+    },
+    "info": {
+      "email": {
+        "title": "Correo Electrónico",
+        "value": "contacto@contpaqi-ai-bridge.com"
+      },
+      "support": {
+        "title": "Soporte",
+        "value": "soporte@contpaqi-ai-bridge.com"
+      },
+      "enterprise": {
+        "title": "Ventas Empresariales",
+        "value": "ventas@contpaqi-ai-bridge.com"
+      }
+    },
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "tu@empresa.com",
+      "company": "Empresa (opcional)",
+      "companyPlaceholder": "Nombre de tu empresa",
+      "subject": "Asunto",
+      "subjectPlaceholder": "Selecciona un asunto",
+      "subjects": {
+        "sales": "Consulta de ventas",
+        "support": "Soporte técnico",
+        "enterprise": "Soluciones empresariales",
+        "other": "Otro"
+      },
+      "message": "Mensaje",
+      "messagePlaceholder": "¿Cómo podemos ayudarte?",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": {
+        "title": "¡Mensaje Enviado!",
+        "message": "Gracias por contactarnos. Te responderemos en un plazo de 24 horas."
+      }
+    }
+  },
+  "footer": {
+    "description": "Procesamiento de facturas con IA para ContPAQi. Automatiza tu flujo de trabajo contable mexicano.",
+    "sections": {
+      "product": "Producto",
+      "support": "Soporte",
+      "company": "Empresa",
+      "legal": "Legal"
+    },
+    "links": {
+      "features": "Características",
+      "pricing": "Precios",
+      "download": "Descargar",
+      "changelog": "Cambios",
+      "docs": "Documentación",
+      "guides": "Guías",
+      "faq": "Preguntas Frecuentes",
+      "contact": "Contacto",
+      "about": "Acerca de",
+      "blog": "Blog",
+      "careers": "Carreras",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio",
+      "license": "Acuerdo de Licencia"
+    },
+    "rights": "Todos los derechos reservados.",
+    "madeWith": "Hecho con ❤️ para negocios mexicanos"
+  }
+}
