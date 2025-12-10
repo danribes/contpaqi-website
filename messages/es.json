@@ -17,13 +17,55 @@
       "subtitle": "Automatiza tu flujo de trabajo contable mexicano. Extrae datos de facturas PDF, valida RFC y cumplimiento CFDI, y publica directamente en ContPAQi con asistencia de IA.",
       "cta": {
         "primary": "Comenzar",
-        "secondary": "Saber Más"
+        "secondary": "Ver Demo"
       },
       "badges": {
         "noCloud": "100% Procesamiento Local",
         "mexicanCompliant": "Cumple con Facturas Mexicanas"
       },
       "demoPlaceholder": "Captura de Pantalla de la App"
+    },
+    "trustBar": {
+      "title": "Confiado por los principales despachos contables de México",
+      "stats": {
+        "accountants": "Contadores",
+        "invoices": "Facturas Procesadas",
+        "timeSaved": "Tiempo Ahorrado"
+      }
+    },
+    "problemSolution": {
+      "title": "Deja de Perder Tiempo en Captura de Datos",
+      "subtitle": "Transforma tu procesamiento de facturas de una carga diaria a un flujo automatizado",
+      "problems": {
+        "title": "Sin ContPAQi AI Bridge",
+        "time": {
+          "title": "Horas de Captura Manual",
+          "description": "Los contadores pasan 2-3 horas diarias capturando datos de facturas en ContPAQi"
+        },
+        "errors": {
+          "title": "Errores Humanos Costosos",
+          "description": "La captura manual genera errores de dedo, montos incorrectos y errores de RFC"
+        },
+        "scaling": {
+          "title": "No Puedes Escalar el Negocio",
+          "description": "Más clientes significa contratar más personal para tareas repetitivas"
+        }
+      },
+      "solutions": {
+        "title": "Con ContPAQi AI Bridge",
+        "speed": {
+          "title": "Procesa Facturas en Segundos",
+          "description": "La IA extrae todos los datos automáticamente - solo revisa y publica"
+        },
+        "accuracy": {
+          "title": "99% de Precisión en Extracción",
+          "description": "Modelos ML entrenados con facturas mexicanas y validación de RFC"
+        },
+        "growth": {
+          "title": "Escala Sin Contratar",
+          "description": "Maneja 10x más facturas con el mismo equipo"
+        }
+      }
     },
     "howItWorks": {
       "title": "Cómo Funciona",
@@ -73,6 +115,66 @@
         }
       },
       "cta": "Ver Todas las Características"
+    },
+    "testimonials": {
+      "title": "Amado por Contadores Mexicanos",
+      "subtitle": "Descubre cómo ContPAQi AI Bridge está transformando los flujos de trabajo contables en todo México",
+      "items": {
+        "1": {
+          "name": "María García",
+          "role": "Contadora Senior",
+          "company": "Despacho Contable García",
+          "quote": "ContPAQi AI Bridge ha transformado nuestro flujo de trabajo. Lo que antes tomaba horas ahora toma minutos. La precisión es increíble.",
+          "result": "Ahorra 15 horas/semana en captura"
+        },
+        "2": {
+          "name": "Carlos Rodríguez",
+          "role": "Socio Director",
+          "company": "Rodríguez y Asociados",
+          "quote": "Hemos podido atender 40% más clientes sin contratar personal adicional. El retorno de inversión fue inmediato.",
+          "result": "40% más capacidad de clientes"
+        },
+        "3": {
+          "name": "Ana Martínez",
+          "role": "Directora de Finanzas",
+          "company": "Grupo Industrial del Norte",
+          "quote": "Las funciones de cumplimiento mexicano son perfectas. La validación de RFC y los cálculos de IVA siempre son precisos.",
+          "result": "Cero errores de captura en 6 meses"
+        }
+      }
+    },
+    "pricingPreview": {
+      "title": "Precios Simples y Transparentes",
+      "subtitle": "Comienza a automatizar tu procesamiento de facturas hoy",
+      "from": "Desde",
+      "month": "mes",
+      "cta": "Ver Todos los Planes"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre ContPAQi AI Bridge",
+      "items": {
+        "1": {
+          "question": "¿Mis datos están seguros?",
+          "answer": "Sí, todo el procesamiento ocurre localmente en tu máquina. Los datos de tus facturas nunca salen de tu computadora ni se envían a ningún servicio en la nube."
+        },
+        "2": {
+          "question": "¿Qué versiones de ContPAQi son compatibles?",
+          "answer": "Soportamos ContPAQi Comercial y ContPAQi Contabilidad. El software se integra directamente a través del SDK oficial de ContPAQi."
+        },
+        "3": {
+          "question": "¿Necesito conexión a internet?",
+          "answer": "Solo para la activación inicial y actualizaciones de software. Una vez activado, todo el procesamiento de IA funciona completamente sin conexión."
+        },
+        "4": {
+          "question": "¿Qué formatos de factura son compatibles?",
+          "answer": "Soportamos facturas PDF, imágenes escaneadas (TIFF, JPG, PNG) y facturas electrónicas CFDI mexicanas (versiones 3.3 y 4.0)."
+        },
+        "5": {
+          "question": "¿Hay prueba gratuita?",
+          "answer": "¡Sí! Ofrecemos una prueba gratuita de 14 días con acceso completo a todas las funciones. No se requiere tarjeta de crédito para comenzar."
+        }
+      }
     },
     "cta": {
       "title": "¿Listo para Automatizar tu Contabilidad?",
@@ -325,6 +427,197 @@
       "license": "Acuerdo de Licencia"
     },
     "rights": "Todos los derechos reservados.",
-    "madeWith": "Hecho con ❤️ para negocios mexicanos"
+    "madeWith": "Hecho con amor para negocios mexicanos"
+  },
+  "auth": {
+    "login": {
+      "title": "Bienvenido de Nuevo",
+      "subtitle": "Inicia sesión para acceder a tu cuenta",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "tu@empresa.com",
+      "password": "Contraseña",
+      "passwordPlaceholder": "Ingresa tu contraseña",
+      "rememberMe": "Recuérdame",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "signIn": "Iniciar Sesión",
+      "signingIn": "Iniciando sesión...",
+      "noAccount": "¿No tienes cuenta?",
+      "signUp": "Regístrate",
+      "error": "Correo o contraseña inválidos"
+    },
+    "register": {
+      "title": "Crear Cuenta",
+      "subtitle": "Comienza tu prueba gratuita de 14 días",
+      "name": "Nombre Completo",
+      "namePlaceholder": "Tu nombre completo",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "tu@empresa.com",
+      "company": "Empresa (opcional)",
+      "companyPlaceholder": "Nombre de tu empresa",
+      "password": "Contraseña",
+      "passwordPlaceholder": "Crea una contraseña (8+ caracteres)",
+      "confirmPassword": "Confirmar Contraseña",
+      "confirmPasswordPlaceholder": "Confirma tu contraseña",
+      "acceptTerms": "Acepto los",
+      "termsLink": "Términos de Servicio",
+      "and": "y la",
+      "privacyLink": "Política de Privacidad",
+      "createAccount": "Crear Cuenta",
+      "creating": "Creando cuenta...",
+      "haveAccount": "¿Ya tienes cuenta?",
+      "signIn": "Inicia sesión",
+      "passwordMismatch": "Las contraseñas no coinciden",
+      "acceptTermsRequired": "Debes aceptar los términos y condiciones",
+      "error": "Error al crear la cuenta",
+      "success": {
+        "title": "¡Cuenta Creada!",
+        "message": "Por favor revisa tu correo para verificar tu cuenta.",
+        "login": "Ir a Iniciar Sesión"
+      }
+    },
+    "forgotPassword": {
+      "title": "Restablecer Contraseña",
+      "subtitle": "Ingresa tu correo y te enviaremos un enlace de restablecimiento",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "tu@empresa.com",
+      "sendLink": "Enviar Enlace",
+      "sending": "Enviando...",
+      "backToLogin": "Volver al inicio de sesión",
+      "error": "Error al enviar el enlace",
+      "success": {
+        "title": "Revisa Tu Correo",
+        "message": "Hemos enviado un enlace de restablecimiento a tu correo electrónico.",
+        "backToLogin": "Volver al inicio de sesión"
+      }
+    }
+  },
+  "portal": {
+    "welcome": "Bienvenido de nuevo",
+    "subtitle": "Administra tu licencia y configuración de cuenta",
+    "license": {
+      "title": "Licencia",
+      "key": "Clave de Licencia",
+      "plan": "Plan",
+      "machines": "Máquinas",
+      "expires": "Expira",
+      "active": "Activa"
+    },
+    "machines": {
+      "title": "Máquinas Activadas",
+      "activated": "activadas",
+      "lastSeen": "Última vez",
+      "noMachines": "No hay máquinas activadas aún"
+    },
+    "quickActions": {
+      "title": "Acciones Rápidas",
+      "download": "Descargar Software",
+      "billing": "Administrar Facturación",
+      "support": "Obtener Soporte"
+    },
+    "account": {
+      "title": "Cuenta",
+      "name": "Nombre",
+      "email": "Correo",
+      "company": "Empresa"
+    },
+    "help": {
+      "title": "¿Necesitas Ayuda?",
+      "description": "Nuestro equipo de soporte está listo para asistirte con cualquier pregunta.",
+      "contact": "Contactar Soporte"
+    }
+  },
+  "download": {
+    "hero": {
+      "title": "Descargar ContPAQi AI Bridge",
+      "subtitle": "Comienza con el procesamiento de facturas con IA en minutos",
+      "downloadButton": "Descargar para Windows",
+      "version": "Versión"
+    },
+    "downloads": {
+      "standard": {
+        "title": "Instalador Estándar",
+        "description": "Recomendado para la mayoría de usuarios. Incluye asistente de configuración guiada.",
+        "button": "Descargar Instalador"
+      },
+      "silent": {
+        "title": "Instalador Silencioso",
+        "description": "Para departamentos de TI. Soporta instalación desatendida.",
+        "button": "Descargar Silencioso"
+      },
+      "releaseNotes": "Ver Notas de Versión"
+    },
+    "requirements": {
+      "title": "Requisitos del Sistema",
+      "minimum": "Mínimo",
+      "recommended": "Recomendado",
+      "best": "Mejor Rendimiento",
+      "os": "Sistema Operativo",
+      "processor": "Procesador",
+      "ram": "Memoria",
+      "storage": "Almacenamiento",
+      "prerequisites": "Prerequisitos"
+    },
+    "install": {
+      "title": "Guía de Instalación",
+      "steps": {
+        "download": "Descarga el instalador desde arriba",
+        "run": "Ejecuta el instalador y sigue el asistente de configuración",
+        "docker": "Asegúrate de que Docker Desktop esté funcionando",
+        "activate": "Ingresa tu clave de licencia cuando se te solicite",
+        "configure": "Configura la conexión con ContPAQi y comienza a procesar"
+      },
+      "fullGuide": "Ver Documentación Completa"
+    },
+    "help": {
+      "title": "¿Necesitas Ayuda con la Instalación?",
+      "description": "Nuestro equipo de soporte puede ayudarte a configurar rápidamente.",
+      "contact": "Contactar Soporte"
+    }
+  },
+  "checkout": {
+    "success": {
+      "title": "¡Pago Exitoso!",
+      "subtitle": "Gracias por tu compra. Tu licencia ya está activa.",
+      "processing": "Procesando tu orden...",
+      "nextSteps": "¿Qué Sigue?",
+      "steps": {
+        "email": {
+          "title": "Revisa Tu Correo",
+          "description": "Hemos enviado tu clave de licencia y recibo a tu correo electrónico."
+        },
+        "download": {
+          "title": "Descarga el Software",
+          "description": "Obtén la última versión de ContPAQi AI Bridge para Windows."
+        },
+        "activate": {
+          "title": "Activa Tu Licencia",
+          "description": "Ingresa tu clave de licencia durante la instalación para activar."
+        }
+      },
+      "downloadButton": "Descargar Software",
+      "portalButton": "Ir al Portal"
+    },
+    "cancel": {
+      "title": "Pago Cancelado",
+      "subtitle": "Tu pago fue cancelado. No se realizaron cargos.",
+      "whyCancel": "¿Cambiaste de opinión?",
+      "reasons": {
+        "questions": "¿Tienes preguntas? Nuestro equipo está feliz de ayudar.",
+        "pricing": "¿Necesitas un plan diferente? Revisa nuestras opciones de precios.",
+        "demo": "¿Quieres ver más? Agenda una demo con nuestro equipo."
+      },
+      "backToPricing": "Volver a Precios",
+      "contactSupport": "Contactar Soporte"
+    }
+  },
+  "legal": {
+    "terms": {
+      "title": "Términos de Servicio",
+      "lastUpdated": "Última actualización"
+    },
+    "privacy": {
+      "title": "Política de Privacidad",
+      "lastUpdated": "Última actualización"
+    }
   }
 }

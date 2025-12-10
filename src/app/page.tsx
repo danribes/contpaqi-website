@@ -8,7 +8,16 @@ import {
   ArrowRight,
   Cpu,
   Table,
-  Eye
+  Eye,
+  Clock,
+  AlertTriangle,
+  TrendingUp,
+  Users,
+  Star,
+  Play,
+  ChevronDown,
+  Calculator,
+  Building2
 } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -40,6 +49,7 @@ export default function HomePage() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                   <Link href="/features" className="btn-secondary">
+                    <Play className="mr-2 h-4 w-4" />
                     {t('hero.cta.secondary')}
                   </Link>
                 </div>
@@ -65,6 +75,115 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Trust Bar */}
+        <section className="py-12 bg-white border-b border-gray-100">
+          <div className="container-custom">
+            <div className="text-center mb-8">
+              <p className="text-sm font-medium text-gray-500 uppercase tracking-wider">
+                {t('trustBar.title')}
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <div key={i} className="flex items-center gap-2">
+                  <Building2 className="h-8 w-8 text-gray-400" />
+                  <span className="font-semibold text-gray-400">Despacho {i}</span>
+                </div>
+              ))}
+            </div>
+            <div className="flex justify-center gap-8 mt-8">
+              <div className="text-center">
+                <p className="text-3xl font-bold text-brand-600">500+</p>
+                <p className="text-sm text-gray-500">{t('trustBar.stats.accountants')}</p>
+              </div>
+              <div className="text-center">
+                <p className="text-3xl font-bold text-brand-600">1M+</p>
+                <p className="text-sm text-gray-500">{t('trustBar.stats.invoices')}</p>
+              </div>
+              <div className="text-center">
+                <p className="text-3xl font-bold text-brand-600">90%</p>
+                <p className="text-sm text-gray-500">{t('trustBar.stats.timeSaved')}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Problem/Solution Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container-custom">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                {t('problemSolution.title')}
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                {t('problemSolution.subtitle')}
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              {/* Problems */}
+              <div className="card border-red-100 bg-red-50/50">
+                <h3 className="text-xl font-bold text-red-700 mb-6 flex items-center gap-2">
+                  <AlertTriangle className="h-6 w-6" />
+                  {t('problemSolution.problems.title')}
+                </h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <Clock className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium text-gray-900">{t('problemSolution.problems.time.title')}</p>
+                      <p className="text-sm text-gray-600">{t('problemSolution.problems.time.description')}</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <AlertTriangle className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium text-gray-900">{t('problemSolution.problems.errors.title')}</p>
+                      <p className="text-sm text-gray-600">{t('problemSolution.problems.errors.description')}</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Users className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium text-gray-900">{t('problemSolution.problems.scaling.title')}</p>
+                      <p className="text-sm text-gray-600">{t('problemSolution.problems.scaling.description')}</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              {/* Solutions */}
+              <div className="card border-green-100 bg-green-50/50">
+                <h3 className="text-xl font-bold text-green-700 mb-6 flex items-center gap-2">
+                  <TrendingUp className="h-6 w-6" />
+                  {t('problemSolution.solutions.title')}
+                </h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <Zap className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium text-gray-900">{t('problemSolution.solutions.speed.title')}</p>
+                      <p className="text-sm text-gray-600">{t('problemSolution.solutions.speed.description')}</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium text-gray-900">{t('problemSolution.solutions.accuracy.title')}</p>
+                      <p className="text-sm text-gray-600">{t('problemSolution.solutions.accuracy.description')}</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <TrendingUp className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium text-gray-900">{t('problemSolution.solutions.growth.title')}</p>
+                      <p className="text-sm text-gray-600">{t('problemSolution.solutions.growth.description')}</p>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -181,6 +300,125 @@ export default function HomePage() {
                 {t('features.cta')}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials */}
+        <section className="py-20 bg-white">
+          <div className="container-custom">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                {t('testimonials.title')}
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                {t('testimonials.subtitle')}
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  name: t('testimonials.items.1.name'),
+                  role: t('testimonials.items.1.role'),
+                  company: t('testimonials.items.1.company'),
+                  quote: t('testimonials.items.1.quote'),
+                  result: t('testimonials.items.1.result'),
+                },
+                {
+                  name: t('testimonials.items.2.name'),
+                  role: t('testimonials.items.2.role'),
+                  company: t('testimonials.items.2.company'),
+                  quote: t('testimonials.items.2.quote'),
+                  result: t('testimonials.items.2.result'),
+                },
+                {
+                  name: t('testimonials.items.3.name'),
+                  role: t('testimonials.items.3.role'),
+                  company: t('testimonials.items.3.company'),
+                  quote: t('testimonials.items.3.quote'),
+                  result: t('testimonials.items.3.result'),
+                },
+              ].map((testimonial, index) => (
+                <div key={index} className="card">
+                  <div className="flex items-center gap-1 mb-4">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <Star key={star} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
+                    ))}
+                  </div>
+                  <blockquote className="text-gray-700 mb-6">
+                    "{testimonial.quote}"
+                  </blockquote>
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center">
+                      <span className="text-brand-600 font-bold">
+                        {testimonial.name.charAt(0)}
+                      </span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                      <p className="text-sm text-gray-500">{testimonial.role}</p>
+                      <p className="text-sm text-gray-500">{testimonial.company}</p>
+                    </div>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-gray-100">
+                    <p className="text-sm text-green-600 font-medium">{testimonial.result}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Preview */}
+        <section className="py-20 bg-gray-50">
+          <div className="container-custom text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              {t('pricingPreview.title')}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+              {t('pricingPreview.subtitle')}
+            </p>
+            <div className="inline-flex items-baseline gap-1 mb-8">
+              <span className="text-sm text-gray-500">{t('pricingPreview.from')}</span>
+              <span className="text-5xl font-bold text-gray-900">$49</span>
+              <span className="text-gray-500">/{t('pricingPreview.month')}</span>
+            </div>
+            <div>
+              <Link href="/pricing" className="btn-primary inline-flex items-center">
+                {t('pricingPreview.cta')}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-white">
+          <div className="container-custom max-w-4xl">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                {t('faq.title')}
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                {t('faq.subtitle')}
+              </p>
+            </div>
+            <div className="space-y-4">
+              {[
+                { q: t('faq.items.1.question'), a: t('faq.items.1.answer') },
+                { q: t('faq.items.2.question'), a: t('faq.items.2.answer') },
+                { q: t('faq.items.3.question'), a: t('faq.items.3.answer') },
+                { q: t('faq.items.4.question'), a: t('faq.items.4.answer') },
+                { q: t('faq.items.5.question'), a: t('faq.items.5.answer') },
+              ].map((faq, index) => (
+                <details key={index} className="card group cursor-pointer">
+                  <summary className="flex items-center justify-between font-semibold text-gray-900 list-none">
+                    {faq.q}
+                    <ChevronDown className="h-5 w-5 text-gray-500 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <p className="mt-4 text-gray-600">{faq.a}</p>
+                </details>
+              ))}
             </div>
           </div>
         </section>

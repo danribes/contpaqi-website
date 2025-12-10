@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "projectName": "ContPAQi AI Bridge Sales Website",
+    "version": "1.0.0",
+    "generatedAt": "2025-12-10T23:00:00.000Z"
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Complete Homepage Hero Section",
+      "description": "Build the hero section with headline 'Stop Typing. Start Growing.', subheadline explaining AI automation, primary CTA 'Start Free Trial', secondary CTA 'Watch Demo', and hero image placeholder",
+      "status": "pending",
+      "dependencies": [],
+      "priority": "high",
+      "details": "Update src/app/page.tsx to include a compelling hero section. Use Tailwind CSS for responsive design. Add gradient background with brand colors. Include animated text or fade-in effects.",
+      "testStrategy": "Visual inspection on desktop and mobile. Verify CTAs link to correct pages. Test animations."
+    },
+    {
+      "id": 2,
+      "title": "Add Trust Bar and Social Proof",
+      "description": "Add trust bar showing 'Trusted by 500+ Mexican accountants' with placeholder logo carousel of accounting firms",
+      "status": "pending",
+      "dependencies": [1],
+      "priority": "high",
+      "details": "Create a horizontal scrolling logo carousel component. Add trust statistics. Use grayscale logos that colorize on hover.",
+      "testStrategy": "Verify carousel scrolls smoothly. Test responsiveness on mobile."
+    },
+    {
+      "id": 3,
+      "title": "Build Problem/Solution Section",
+      "description": "Create a section highlighting pain points of manual data entry and how ContPAQi AI Bridge solves them with before/after comparison",
+      "status": "pending",
+      "dependencies": [1],
+      "priority": "high",
+      "details": "Two-column layout: Left shows problems (time wasted, errors, tedium), Right shows solutions. Use icons from Lucide React. Include compelling copy.",
+      "testStrategy": "Verify layout renders correctly on all screen sizes."
+    },
+    {
+      "id": 4,
+      "title": "Implement How It Works Section",
+      "description": "Create a 4-step process section: Upload PDF, AI Extracts, Review with Confidence, Post to ContPAQi",
+      "status": "pending",
+      "dependencies": [1],
+      "priority": "high",
+      "details": "Create numbered step cards with icons. Add connecting lines/arrows between steps. Consider adding simple animations on scroll.",
+      "testStrategy": "Verify steps display in correct order. Test mobile stacking."
+    },
+    {
+      "id": 5,
+      "title": "Build Key Features Grid",
+      "description": "Create a 6-item feature grid showcasing: AI OCR, RFC Validation, IVA Calculation, Confidence Scoring, Batch Processing, ContPAQi Integration",
+      "status": "pending",
+      "dependencies": [1],
+      "priority": "high",
+      "details": "Use CSS Grid for responsive 3x2 layout on desktop, 2x3 on tablet, 1x6 on mobile. Each card has icon, title, short description. Add hover effects.",
+      "testStrategy": "Verify grid reflows correctly on all breakpoints."
+    },
+    {
+      "id": 6,
+      "title": "Create Testimonials Section",
+      "description": "Build testimonials section with 3-4 customer quotes, photos, company names, roles, and results achieved",
+      "status": "pending",
+      "dependencies": [1],
+      "priority": "medium",
+      "details": "Create testimonial cards with avatar, quote, attribution. Consider carousel for mobile. Use placeholder data initially.",
+      "testStrategy": "Verify testimonials display correctly and cycle if using carousel."
+    },
+    {
+      "id": 7,
+      "title": "Add Pricing Preview and FAQ",
+      "description": "Add pricing preview section showing starting price with CTA to full pricing page, and FAQ accordion",
+      "status": "pending",
+      "dependencies": [1],
+      "priority": "medium",
+      "details": "Create pricing teaser card. Build FAQ accordion component with expand/collapse. Include 5-6 common questions about security, compatibility, support.",
+      "testStrategy": "Verify FAQ expands/collapses correctly. Test pricing CTA links."
+    },
+    {
+      "id": 8,
+      "title": "Build Final CTA Section",
+      "description": "Create compelling final CTA section with 'Ready to automate your invoice processing?' and sign-up button",
+      "status": "pending",
+      "dependencies": [1],
+      "priority": "medium",
+      "details": "Full-width section with gradient background matching brand. Large heading, supporting text, prominent CTA button.",
+      "testStrategy": "Verify CTA is visually prominent and links correctly."
+    },
+    {
+      "id": 9,
+      "title": "Complete Features Page",
+      "description": "Build comprehensive features page with sections for AI Processing, Mexican Compliance, UI Features, Integration, and Security",
+      "status": "pending",
+      "dependencies": [5],
+      "priority": "high",
+      "details": "Create detailed feature sections with screenshots/illustrations. Group features logically. Add sticky navigation for long page. Include technical details for evaluation stage buyers.",
+      "testStrategy": "Verify all sections render correctly. Test navigation links."
+    },
+    {
+      "id": 10,
+      "title": "Build Pricing Page with Stripe Integration",
+      "description": "Create pricing page with monthly/yearly toggle, 3 pricing tiers (Starter $49, Professional $99, Enterprise custom), feature comparison table, and CTAs",
+      "status": "pending",
+      "dependencies": [],
+      "priority": "high",
+      "details": "Build pricing toggle component. Create pricing cards with highlights. Implement feature comparison table. Connect CTAs to checkout flow. Highlight Professional as 'Most Popular'.",
+      "testStrategy": "Verify pricing toggle updates prices. Test CTA buttons link to checkout."
+    },
+    {
+      "id": 11,
+      "title": "Implement Checkout API",
+      "description": "Complete POST /api/checkout endpoint to create Stripe checkout sessions for selected plans",
+      "status": "pending",
+      "dependencies": [10],
+      "priority": "high",
+      "details": "Accept plan ID and billing interval. Create Stripe checkout session with correct price ID. Include metadata. Return checkout URL. Handle errors gracefully.",
+      "testStrategy": "Test with Stripe test mode. Verify session creation for all plan combinations."
+    },
+    {
+      "id": 12,
+      "title": "Complete Stripe Webhook Handler",
+      "description": "Implement webhook handler for checkout.session.completed, subscription events, and invoice events to create licenses and send emails",
+      "status": "pending",
+      "dependencies": [11],
+      "priority": "high",
+      "details": "Verify webhook signature. Handle checkout.session.completed to create user and license. Handle subscription.updated/deleted. Handle invoice.paid for renewals. Send confirmation emails via Resend.",
+      "testStrategy": "Test with Stripe CLI webhook forwarding. Verify license creation and email delivery."
+    },
+    {
+      "id": 13,
+      "title": "Build Contact Page with Form",
+      "description": "Create contact page with form (Name, Email, Company, Phone, Message Type, Message) and contact information display",
+      "status": "pending",
+      "dependencies": [],
+      "priority": "high",
+      "details": "Build form with Zod validation. Create POST /api/contact endpoint. Store submissions in database. Send notification email. Show success/error states.",
+      "testStrategy": "Test form validation. Verify database storage. Check email notifications."
+    },
+    {
+      "id": 14,
+      "title": "Implement Authentication Pages",
+      "description": "Build login, register, and forgot password pages using NextAuth.js",
+      "status": "pending",
+      "dependencies": [],
+      "priority": "high",
+      "details": "Create /auth/login with email/password. Create /auth/register with name, email, password, company. Create /auth/forgot-password. Style consistently with brand.",
+      "testStrategy": "Test login flow end-to-end. Verify registration creates user. Test password reset."
+    },
+    {
+      "id": 15,
+      "title": "Build Customer Portal Dashboard",
+      "description": "Create protected customer portal with dashboard showing active licenses, usage statistics, and quick actions",
+      "status": "pending",
+      "dependencies": [14, 12],
+      "priority": "high",
+      "details": "Create /portal layout with sidebar navigation. Build dashboard page showing license overview. Display usage stats. Add quick action buttons. Protect with auth middleware.",
+      "testStrategy": "Test portal access requires authentication. Verify data displays correctly."
+    },
+    {
+      "id": 16,
+      "title": "Implement License Management in Portal",
+      "description": "Build license management section showing license keys, machine activations, and ability to deactivate machines",
+      "status": "pending",
+      "dependencies": [15],
+      "priority": "medium",
+      "details": "Create /portal/licenses page. Show license details with masked key (click to reveal). Display activated machines with deactivate button. Add GET /api/license/status and POST /api/license/deactivate endpoints.",
+      "testStrategy": "Verify licenses display correctly. Test deactivation flow."
+    },
+    {
+      "id": 17,
+      "title": "Build Download Page",
+      "description": "Create download page with current version, system requirements, download buttons, and installation guide",
+      "status": "pending",
+      "dependencies": [],
+      "priority": "medium",
+      "details": "Create /download page. Show version number and release date. List system requirements (Windows 10+, Docker, .NET). Add download buttons. Include quick installation steps.",
+      "testStrategy": "Verify page renders correctly. Test download links (can use placeholder)."
+    },
+    {
+      "id": 18,
+      "title": "Create Email Templates",
+      "description": "Build responsive email templates for welcome, order confirmation, license delivery, and password reset",
+      "status": "pending",
+      "dependencies": [12],
+      "priority": "medium",
+      "details": "Create email templates using React Email or plain HTML. Include brand styling. Make mobile responsive. Add clear CTAs. Test with Resend.",
+      "testStrategy": "Send test emails. Verify rendering in major email clients."
+    },
+    {
+      "id": 19,
+      "title": "Add Legal Pages",
+      "description": "Create Terms of Service, Privacy Policy, and Refund Policy pages",
+      "status": "pending",
+      "dependencies": [],
+      "priority": "medium",
+      "details": "Create /terms, /privacy, /refunds pages. Add placeholder legal text (to be reviewed by legal). Style consistently. Include effective date.",
+      "testStrategy": "Verify pages render correctly. Check navigation links."
+    },
+    {
+      "id": 20,
+      "title": "Complete Internationalization",
+      "description": "Ensure all pages have complete English and Spanish translations",
+      "status": "pending",
+      "dependencies": [1, 9, 10, 13, 17, 19],
+      "priority": "medium",
+      "details": "Review all pages for hardcoded text. Add missing translation keys to en.json and es.json. Verify language switcher works. Test RTL is not needed.",
+      "testStrategy": "Switch between languages. Verify all text translates correctly."
+    }
+  ]
+}

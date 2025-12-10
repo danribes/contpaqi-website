@@ -1,0 +1,412 @@
+# Product Requirements Document: ContPAQi AI Bridge Sales Website
+
+## 1. Overview
+
+### 1.1 Product Name
+ContPAQi AI Bridge - Sales and Marketing Website
+
+### 1.2 Product Vision
+Create a modern, conversion-optimized sales website to market and sell ContPAQi AI Bridge - an AI-powered invoice processing desktop application that automates data entry for Mexican accountants using ContPAQi accounting software.
+
+### 1.3 Target Audience
+- Mexican accountants and bookkeepers
+- Accounting firms handling multiple clients
+- Small to medium businesses with in-house accounting
+- CFOs and financial managers looking to improve efficiency
+
+### 1.4 Value Proposition
+"Eliminate 90% of manual invoice data entry. Let AI extract, validate, and post invoice data directly to ContPAQi - while you maintain full control."
+
+## 2. Technical Foundation (Already Implemented)
+
+The website uses the following pre-configured stack:
+- Next.js 14 with App Router and TypeScript
+- Tailwind CSS with custom brand colors
+- PostgreSQL with Prisma ORM
+- NextAuth.js v5 for authentication
+- Stripe for payments and subscriptions
+- next-intl for internationalization (EN/ES)
+- Resend for transactional emails
+
+## 3. Product Tiers and Pricing
+
+### 3.1 Starter Plan
+- Price: $49/month or $490/year (17% savings)
+- 1 machine activation
+- 100 invoices/month
+- Email support
+- Basic reporting
+
+### 3.2 Professional Plan (Most Popular)
+- Price: $99/month or $990/year (17% savings)
+- 3 machine activations
+- Unlimited invoices
+- Priority support
+- Advanced reporting
+- Batch processing
+
+### 3.3 Enterprise Plan
+- Custom pricing
+- Unlimited machines
+- Unlimited invoices
+- Dedicated support
+- Custom integrations
+- SLA guarantee
+- On-premise deployment option
+
+## 4. Website Pages and Features
+
+### 4.1 Homepage (/)
+**Purpose:** Convert visitors into leads/customers
+
+**Sections:**
+1. **Hero Section**
+   - Headline: "Stop Typing. Start Growing."
+   - Subheadline: Explain AI-powered invoice automation
+   - Primary CTA: "Start Free Trial"
+   - Secondary CTA: "Watch Demo"
+   - Hero image/video showing product interface
+
+2. **Trust Bar**
+   - "Trusted by 500+ Mexican accountants"
+   - Logo carousel of accounting firms using the product
+
+3. **Problem/Solution Section**
+   - Pain points of manual data entry
+   - How ContPAQi AI Bridge solves them
+
+4. **How It Works**
+   - Step 1: Upload PDF invoices
+   - Step 2: AI extracts and validates data
+   - Step 3: Review with confidence scores
+   - Step 4: Post directly to ContPAQi
+   - Include animated illustrations or GIFs
+
+5. **Key Features Grid**
+   - AI-powered OCR extraction
+   - Mexican RFC validation
+   - Automatic IVA calculation
+   - Confidence scoring
+   - Batch processing
+   - ContPAQi integration
+
+6. **Testimonials Section**
+   - 3-4 customer testimonials with photos
+   - Company names and roles
+   - Results achieved (time saved, invoices processed)
+
+7. **Pricing Preview**
+   - Show starting price
+   - CTA to full pricing page
+
+8. **FAQ Section**
+   - Common questions about the product
+   - Security, compatibility, support
+
+9. **Final CTA**
+   - "Ready to automate your invoice processing?"
+   - Sign up form or button
+
+### 4.2 Features Page (/features)
+**Purpose:** Detailed feature explanation for evaluation stage
+
+**Sections:**
+1. **Feature Overview Hero**
+   - "Powerful features for modern accountants"
+
+2. **AI Processing Features**
+   - Tesseract OCR with Spanish support
+   - TATR table detection
+   - LayoutLMv3 semantic understanding
+   - Real-time confidence scoring
+   - Detailed explanations with screenshots
+
+3. **Mexican Compliance Features**
+   - RFC validation (person/company formats)
+   - Automatic IVA (16%) calculation
+   - CFDI compatibility
+   - SAT compliance
+
+4. **User Interface Features**
+   - Split-screen PDF viewer
+   - Color-coded confidence indicators
+   - Keyboard shortcuts
+   - Batch processing queue
+
+5. **Integration Features**
+   - ContPAQi COM SDK integration
+   - Windows Service architecture
+   - Docker-based AI processing
+   - Hardware-locked licensing
+
+6. **Security Features**
+   - Local data processing
+   - No cloud data storage
+   - Hardware fingerprint licensing
+   - Audit trails
+
+### 4.3 Pricing Page (/pricing)
+**Purpose:** Clear pricing presentation and purchase flow
+
+**Sections:**
+1. **Pricing Hero**
+   - "Simple, transparent pricing"
+   - Toggle: Monthly/Yearly (show savings)
+
+2. **Pricing Cards**
+   - Starter, Professional, Enterprise
+   - Feature comparison
+   - CTA buttons
+   - Highlight "Most Popular"
+
+3. **Feature Comparison Table**
+   - Full feature-by-feature comparison
+   - Checkmarks and limits
+
+4. **Money-Back Guarantee**
+   - 30-day satisfaction guarantee
+
+5. **FAQ**
+   - Billing questions
+   - Upgrade/downgrade policy
+   - Refund policy
+
+### 4.4 Contact Page (/contact)
+**Purpose:** Lead capture and customer support
+
+**Sections:**
+1. **Contact Form**
+   - Name, Email, Company, Phone
+   - Message type (Sales, Support, Partnership)
+   - Message field
+   - Submit to database and send notification
+
+2. **Contact Information**
+   - Email addresses
+   - Phone number
+   - Business hours (Mexico City timezone)
+
+3. **Sales Team CTA**
+   - Book a demo option
+   - Calendar integration (optional)
+
+### 4.5 Download Page (/download)
+**Purpose:** Software download for customers
+
+**Sections:**
+1. **Download Hero**
+   - Current version number
+   - System requirements summary
+
+2. **Download Options**
+   - Windows installer (primary)
+   - Silent installer for IT departments
+   - Release notes link
+
+3. **System Requirements**
+   - Minimum and recommended specs
+   - Prerequisites (Docker, .NET, ContPAQi)
+
+4. **Installation Guide**
+   - Quick start steps
+   - Link to full documentation
+
+### 4.6 Authentication Pages
+
+**Login Page (/auth/login)**
+- Email/password login
+- "Remember me" option
+- "Forgot password" link
+- Social login options (optional)
+
+**Register Page (/auth/register)**
+- Full name, Email, Password
+- Company name (optional)
+- Terms acceptance
+- Email verification
+
+**Forgot Password (/auth/forgot-password)**
+- Email input
+- Reset link sent confirmation
+
+### 4.7 Customer Portal (/portal)
+**Purpose:** Post-purchase customer area
+
+**Sections:**
+1. **Dashboard**
+   - Active licenses overview
+   - Usage statistics
+   - Quick actions
+
+2. **License Management**
+   - View license keys
+   - Machine activations
+   - Deactivate machines
+
+3. **Billing**
+   - Current plan
+   - Invoice history
+   - Update payment method
+   - Upgrade/downgrade
+
+4. **Downloads**
+   - Latest version download
+   - Previous versions
+   - Release notes
+
+5. **Support**
+   - Submit ticket
+   - View ticket history
+   - Knowledge base links
+
+### 4.8 Legal Pages
+- Terms of Service (/terms)
+- Privacy Policy (/privacy)
+- Refund Policy (/refunds)
+
+### 4.9 Blog (Optional - Future)
+- Technical articles
+- Product updates
+- Industry news
+
+## 5. API Endpoints (Complete Implementation)
+
+### 5.1 Checkout API (POST /api/checkout)
+- Accept plan and billing interval
+- Create Stripe checkout session
+- Return checkout URL
+
+### 5.2 Webhook Handler (POST /api/webhooks/stripe)
+- Handle checkout.session.completed
+- Handle subscription events
+- Handle invoice events
+- Create license on successful payment
+- Send confirmation email
+
+### 5.3 License APIs
+- POST /api/license/validate - Validate license key
+- POST /api/license/activate - Activate on machine
+- POST /api/license/deactivate - Deactivate machine
+- GET /api/license/status - Get license status
+
+### 5.4 Contact API (POST /api/contact)
+- Store contact submission
+- Send notification email
+- Return success response
+
+### 5.5 Auth APIs (NextAuth.js)
+- Signin/signout
+- Session management
+- Password reset
+
+## 6. Email Templates
+
+### 6.1 Transactional Emails
+- Welcome email (after registration)
+- Email verification
+- Password reset
+- Order confirmation
+- License delivery
+- Invoice receipt
+
+### 6.2 Email Design
+- Responsive HTML templates
+- Brand consistent design
+- Clear CTAs
+- Unsubscribe option
+
+## 7. Internationalization Requirements
+
+### 7.1 Supported Languages
+- English (en) - default
+- Spanish (es) - primary market
+
+### 7.2 Translation Coverage
+- All UI text
+- Error messages
+- Email templates
+- Legal pages
+- SEO metadata
+
+## 8. SEO Requirements
+
+### 8.1 Technical SEO
+- Semantic HTML structure
+- Meta titles and descriptions
+- Open Graph tags
+- Twitter cards
+- Structured data (Organization, Product, FAQ)
+- XML sitemap
+- robots.txt
+
+### 8.2 Page-Specific SEO
+- Homepage: "ContPAQi AI Bridge - Automate Invoice Processing"
+- Features: "Features - AI Invoice Processing for ContPAQi"
+- Pricing: "Pricing - ContPAQi AI Bridge Plans"
+
+## 9. Performance Requirements
+
+- Lighthouse score > 90 for all categories
+- First Contentful Paint < 1.5s
+- Time to Interactive < 3s
+- Image optimization (WebP, lazy loading)
+- Code splitting
+- CDN for static assets
+
+## 10. Security Requirements
+
+- HTTPS everywhere
+- CSRF protection
+- Input sanitization
+- Rate limiting on APIs
+- Secure headers
+- PCI compliance for payments (via Stripe)
+
+## 11. Analytics and Tracking
+
+- Google Analytics 4
+- Conversion tracking
+- Event tracking (CTA clicks, form submissions)
+- A/B testing capability (optional)
+
+## 12. Success Metrics
+
+- Conversion rate: 3%+ of visitors to trial
+- Trial to paid: 20%+
+- Bounce rate: < 40%
+- Average session duration: > 2 minutes
+- Contact form submissions: 10+ per week
+
+## 13. Implementation Priority
+
+### Phase 1: Core Sales Funnel
+1. Homepage with all sections
+2. Pricing page with Stripe integration
+3. Checkout flow
+4. Basic portal (license view)
+5. Contact page
+
+### Phase 2: Customer Experience
+6. Download page
+7. Full portal features
+8. Email templates
+9. Auth improvements
+
+### Phase 3: Growth
+10. Blog setup
+11. Analytics integration
+12. SEO optimization
+13. A/B testing
+
+## 14. Constraints and Assumptions
+
+### Constraints
+- Must work on latest Chrome, Firefox, Safari, Edge
+- Mobile responsive (mobile-first approach)
+- Mexican market compliance
+- Spanish language support required
+
+### Assumptions
+- Stripe account is configured with correct products
+- Domain and hosting will be handled separately
+- ContPAQi software details provided by product team

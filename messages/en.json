@@ -17,13 +17,55 @@
       "subtitle": "Automate your Mexican accounting workflow. Extract data from PDF invoices, validate RFC and CFDI compliance, and post directly to ContPAQi with AI assistance.",
       "cta": {
         "primary": "Get Started",
-        "secondary": "Learn More"
+        "secondary": "Watch Demo"
       },
       "badges": {
         "noCloud": "100% Local Processing",
         "mexicanCompliant": "Mexican Invoice Compliant"
       },
       "demoPlaceholder": "App Demo Screenshot"
+    },
+    "trustBar": {
+      "title": "Trusted by leading accounting firms in Mexico",
+      "stats": {
+        "accountants": "Accountants",
+        "invoices": "Invoices Processed",
+        "timeSaved": "Time Saved"
+      }
+    },
+    "problemSolution": {
+      "title": "Stop Wasting Time on Data Entry",
+      "subtitle": "Transform your invoice processing from a daily burden into an automated workflow",
+      "problems": {
+        "title": "Without ContPAQi AI Bridge",
+        "time": {
+          "title": "Hours of Manual Data Entry",
+          "description": "Accountants spend 2-3 hours daily typing invoice data into ContPAQi"
+        },
+        "errors": {
+          "title": "Costly Human Errors",
+          "description": "Manual entry leads to typos, wrong amounts, and RFC mistakes"
+        },
+        "scaling": {
+          "title": "Can't Scale the Business",
+          "description": "More clients means hiring more staff for repetitive tasks"
+        }
+      },
+      "solutions": {
+        "title": "With ContPAQi AI Bridge",
+        "speed": {
+          "title": "Process Invoices in Seconds",
+          "description": "AI extracts all data automatically - just review and post"
+        },
+        "accuracy": {
+          "title": "99% Extraction Accuracy",
+          "description": "ML models trained on Mexican invoices with RFC validation"
+        },
+        "growth": {
+          "title": "Scale Without Hiring",
+          "description": "Handle 10x more invoices with the same team"
+        }
+      }
     },
     "howItWorks": {
       "title": "How It Works",
@@ -73,6 +115,66 @@
         }
       },
       "cta": "View All Features"
+    },
+    "testimonials": {
+      "title": "Loved by Mexican Accountants",
+      "subtitle": "See how ContPAQi AI Bridge is transforming accounting workflows across Mexico",
+      "items": {
+        "1": {
+          "name": "Maria Garcia",
+          "role": "Senior Accountant",
+          "company": "Despacho Contable Garcia",
+          "quote": "ContPAQi AI Bridge has transformed our workflow. What used to take hours now takes minutes. The accuracy is incredible.",
+          "result": "Saved 15 hours/week on data entry"
+        },
+        "2": {
+          "name": "Carlos Rodriguez",
+          "role": "Managing Partner",
+          "company": "Rodriguez y Asociados",
+          "quote": "We've been able to take on 40% more clients without hiring additional staff. The ROI was immediate.",
+          "result": "40% increase in client capacity"
+        },
+        "3": {
+          "name": "Ana Martinez",
+          "role": "CFO",
+          "company": "Grupo Industrial del Norte",
+          "quote": "The Mexican compliance features are perfect. RFC validation and IVA calculations are always accurate.",
+          "result": "Zero data entry errors in 6 months"
+        }
+      }
+    },
+    "pricingPreview": {
+      "title": "Simple, Transparent Pricing",
+      "subtitle": "Start automating your invoice processing today",
+      "from": "Starting from",
+      "month": "month",
+      "cta": "View All Plans"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about ContPAQi AI Bridge",
+      "items": {
+        "1": {
+          "question": "Is my data secure?",
+          "answer": "Yes, all processing happens locally on your machine. Your invoice data never leaves your computer or gets sent to any cloud service."
+        },
+        "2": {
+          "question": "Which ContPAQi versions are supported?",
+          "answer": "We support ContPAQi Comercial and ContPAQi Contabilidad. The software integrates directly through the official ContPAQi SDK."
+        },
+        "3": {
+          "question": "Do I need an internet connection?",
+          "answer": "Only for initial activation and software updates. Once activated, all AI processing works completely offline."
+        },
+        "4": {
+          "question": "What invoice formats are supported?",
+          "answer": "We support PDF invoices, scanned images (TIFF, JPG, PNG), and Mexican CFDI electronic invoices (versions 3.3 and 4.0)."
+        },
+        "5": {
+          "question": "Is there a free trial?",
+          "answer": "Yes! We offer a 14-day free trial with full access to all features. No credit card required to start."
+        }
+      }
     },
     "cta": {
       "title": "Ready to Automate Your Accounting?",
@@ -325,6 +427,197 @@
       "license": "License Agreement"
     },
     "rights": "All rights reserved.",
-    "madeWith": "Made with ❤️ for Mexican businesses"
+    "madeWith": "Made with love for Mexican businesses"
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to access your account",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "signIn": "Sign In",
+      "signingIn": "Signing in...",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up",
+      "error": "Invalid email or password"
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Start your 14-day free trial",
+      "name": "Full Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "company": "Company (optional)",
+      "companyPlaceholder": "Your company name",
+      "password": "Password",
+      "passwordPlaceholder": "Create a password (8+ characters)",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Confirm your password",
+      "acceptTerms": "I agree to the",
+      "termsLink": "Terms of Service",
+      "and": "and",
+      "privacyLink": "Privacy Policy",
+      "createAccount": "Create Account",
+      "creating": "Creating account...",
+      "haveAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "passwordMismatch": "Passwords do not match",
+      "acceptTermsRequired": "You must accept the terms and conditions",
+      "error": "Failed to create account",
+      "success": {
+        "title": "Account Created!",
+        "message": "Please check your email to verify your account.",
+        "login": "Go to Login"
+      }
+    },
+    "forgotPassword": {
+      "title": "Reset Password",
+      "subtitle": "Enter your email and we'll send you a reset link",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "sendLink": "Send Reset Link",
+      "sending": "Sending...",
+      "backToLogin": "Back to login",
+      "error": "Failed to send reset link",
+      "success": {
+        "title": "Check Your Email",
+        "message": "We've sent a password reset link to your email address.",
+        "backToLogin": "Back to login"
+      }
+    }
+  },
+  "portal": {
+    "welcome": "Welcome back",
+    "subtitle": "Manage your license and account settings",
+    "license": {
+      "title": "License",
+      "key": "License Key",
+      "plan": "Plan",
+      "machines": "Machines",
+      "expires": "Expires",
+      "active": "Active"
+    },
+    "machines": {
+      "title": "Activated Machines",
+      "activated": "activated",
+      "lastSeen": "Last seen",
+      "noMachines": "No machines activated yet"
+    },
+    "quickActions": {
+      "title": "Quick Actions",
+      "download": "Download Software",
+      "billing": "Manage Billing",
+      "support": "Get Support"
+    },
+    "account": {
+      "title": "Account",
+      "name": "Name",
+      "email": "Email",
+      "company": "Company"
+    },
+    "help": {
+      "title": "Need Help?",
+      "description": "Our support team is ready to assist you with any questions.",
+      "contact": "Contact Support"
+    }
+  },
+  "download": {
+    "hero": {
+      "title": "Download ContPAQi AI Bridge",
+      "subtitle": "Get started with AI-powered invoice processing in minutes",
+      "downloadButton": "Download for Windows",
+      "version": "Version"
+    },
+    "downloads": {
+      "standard": {
+        "title": "Standard Installer",
+        "description": "Recommended for most users. Includes guided setup wizard.",
+        "button": "Download Installer"
+      },
+      "silent": {
+        "title": "Silent Installer",
+        "description": "For IT departments. Supports unattended installation.",
+        "button": "Download Silent"
+      },
+      "releaseNotes": "View Release Notes"
+    },
+    "requirements": {
+      "title": "System Requirements",
+      "minimum": "Minimum",
+      "recommended": "Recommended",
+      "best": "Best Performance",
+      "os": "Operating System",
+      "processor": "Processor",
+      "ram": "Memory",
+      "storage": "Storage",
+      "prerequisites": "Prerequisites"
+    },
+    "install": {
+      "title": "Installation Guide",
+      "steps": {
+        "download": "Download the installer from above",
+        "run": "Run the installer and follow the setup wizard",
+        "docker": "Ensure Docker Desktop is running",
+        "activate": "Enter your license key when prompted",
+        "configure": "Configure ContPAQi connection and start processing"
+      },
+      "fullGuide": "View Full Documentation"
+    },
+    "help": {
+      "title": "Need Help Installing?",
+      "description": "Our support team can help you get set up quickly.",
+      "contact": "Contact Support"
+    }
+  },
+  "checkout": {
+    "success": {
+      "title": "Payment Successful!",
+      "subtitle": "Thank you for your purchase. Your license is now active.",
+      "processing": "Processing your order...",
+      "nextSteps": "What's Next?",
+      "steps": {
+        "email": {
+          "title": "Check Your Email",
+          "description": "We've sent your license key and receipt to your email address."
+        },
+        "download": {
+          "title": "Download the Software",
+          "description": "Get the latest version of ContPAQi AI Bridge for Windows."
+        },
+        "activate": {
+          "title": "Activate Your License",
+          "description": "Enter your license key during installation to activate."
+        }
+      },
+      "downloadButton": "Download Software",
+      "portalButton": "Go to Portal"
+    },
+    "cancel": {
+      "title": "Checkout Cancelled",
+      "subtitle": "Your checkout was cancelled. No charges were made.",
+      "whyCancel": "Changed your mind?",
+      "reasons": {
+        "questions": "Have questions? Our team is happy to help.",
+        "pricing": "Need a different plan? Check out our pricing options.",
+        "demo": "Want to see more? Book a demo with our team."
+      },
+      "backToPricing": "Back to Pricing",
+      "contactSupport": "Contact Support"
+    }
+  },
+  "legal": {
+    "terms": {
+      "title": "Terms of Service",
+      "lastUpdated": "Last updated"
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated"
+    }
   }
 }
