@@ -10,13 +10,13 @@
   "home": {
     "hero": {
       "title": {
-        "line1": "AI-Powered",
-        "highlight": "Invoice Processing",
-        "line2": "for ContPAQi"
+        "line1": "Stop Typing.",
+        "highlight": "Start Growing.",
+        "line2": ""
       },
-      "subtitle": "Automate your Mexican accounting workflow. Extract data from PDF invoices, validate RFC and CFDI compliance, and post directly to ContPAQi with AI assistance.",
+      "subtitle": "Let AI handle your invoice data entry. Extract data from PDFs in seconds, validate RFC compliance automatically, and post directly to ContPAQi while you focus on what matters.",
       "cta": {
-        "primary": "Get Started",
+        "primary": "Start Free Trial",
         "secondary": "Watch Demo"
       },
       "badges": {

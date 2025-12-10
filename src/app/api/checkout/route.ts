@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { stripe, getPlanFromPrice, isYearlyPrice } from '@/lib/stripe';
+import { getStripe, getPlanFromPrice, isYearlyPrice } from '@/lib/stripe';
 import { z } from 'zod';
 
 const checkoutSchema = z.object({
@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
 
     const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
 
-    const session = await stripe.checkout.sessions.create({
+    const session = await getStripe().checkout.sessions.create({
       mode: 'subscription',
       payment_method_types: ['card'],
       customer_email: email,

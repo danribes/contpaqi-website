@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { headers } from 'next/headers';
 import Stripe from 'stripe';
-import { stripe, getPlanFromPrice, PLANS } from '@/lib/stripe';
+import { getStripe, getPlanFromPrice, PLANS } from '@/lib/stripe';
 import { db } from '@/lib/db';
 import { createLicense } from '@/lib/license';
 import { sendPurchaseConfirmation } from '@/lib/email';
@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
   let event: Stripe.Event;
 
   try {
-    event = stripe.webhooks.constructEvent(
+    event = getStripe().webhooks.constructEvent(
       body,
       signature,
       process.env.STRIPE_WEBHOOK_SECRET!
@@ -151,7 +151,7 @@ async function handleSubscriptionUpdated(subscription: Stripe.Subscription) {
 
   // Update license status based on subscription status
   const customerId = subscription.customer as string;
-  const customer = await stripe.customers.retrieve(customerId);
+  const customer = await getStripe().customers.retrieve(customerId);
 
   if (customer.deleted) {
     return;
@@ -181,7 +181,7 @@ async function handleSubscriptionUpdated(subscription: Stripe.Subscription) {
 
 async function handleSubscriptionDeleted(subscription: Stripe.Subscription) {
   const customerId = subscription.customer as string;
-  const customer = await stripe.customers.retrieve(customerId);
+  const customer = await getStripe().customers.retrieve(customerId);
 
   if (customer.deleted) {
     return;
