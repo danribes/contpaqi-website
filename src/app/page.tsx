@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { LogoCarousel } from '@/components/ui/LogoCarousel';
 
 export default function HomePage() {
   const t = useTranslations('home');
@@ -88,33 +89,32 @@ export default function HomePage() {
         </section>
 
         {/* Trust Bar */}
-        <section className="py-12 bg-white border-b border-gray-100">
+        <section className="py-16 bg-white border-b border-gray-100 overflow-hidden">
           <div className="container-custom">
             <div className="text-center mb-8">
               <p className="text-sm font-medium text-gray-500 uppercase tracking-wider">
                 {t('trustBar.title')}
               </p>
             </div>
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <div key={i} className="flex items-center gap-2">
-                  <Building2 className="h-8 w-8 text-gray-400" />
-                  <span className="font-semibold text-gray-400">Despacho {i}</span>
-                </div>
-              ))}
+
+            {/* Logo Carousel */}
+            <div className="mb-12">
+              <LogoCarousel />
             </div>
-            <div className="flex justify-center gap-8 mt-8">
-              <div className="text-center">
-                <p className="text-3xl font-bold text-brand-600">500+</p>
-                <p className="text-sm text-gray-500">{t('trustBar.stats.accountants')}</p>
+
+            {/* Statistics */}
+            <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto">
+              <div className="text-center p-4 rounded-lg hover:bg-gray-50 transition-colors">
+                <p className="text-3xl md:text-4xl font-bold text-brand-600 mb-1">500+</p>
+                <p className="text-xs md:text-sm text-gray-500">{t('trustBar.stats.accountants')}</p>
               </div>
-              <div className="text-center">
-                <p className="text-3xl font-bold text-brand-600">1M+</p>
-                <p className="text-sm text-gray-500">{t('trustBar.stats.invoices')}</p>
+              <div className="text-center p-4 rounded-lg hover:bg-gray-50 transition-colors border-x border-gray-100">
+                <p className="text-3xl md:text-4xl font-bold text-brand-600 mb-1">1M+</p>
+                <p className="text-xs md:text-sm text-gray-500">{t('trustBar.stats.invoices')}</p>
               </div>
-              <div className="text-center">
-                <p className="text-3xl font-bold text-brand-600">90%</p>
-                <p className="text-sm text-gray-500">{t('trustBar.stats.timeSaved')}</p>
+              <div className="text-center p-4 rounded-lg hover:bg-gray-50 transition-colors">
+                <p className="text-3xl md:text-4xl font-bold text-brand-600 mb-1">90%</p>
+                <p className="text-xs md:text-sm text-gray-500">{t('trustBar.stats.timeSaved')}</p>
               </div>
             </div>
           </div>
