@@ -32,28 +32,33 @@ export default function HomePage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative gradient-bg overflow-hidden">
-          <div className="container-custom py-20 lg:py-32">
+          {/* Background decoration */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute -top-40 -right-40 w-80 h-80 bg-brand-200 rounded-full opacity-20 blur-3xl animate-pulse-slow"></div>
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-accent-200 rounded-full opacity-20 blur-3xl animate-pulse-slow" style={{ animationDelay: '1.5s' }}></div>
+          </div>
+
+          <div className="container-custom py-20 lg:py-32 relative">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-8 animate-in">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900">
-                  {t('hero.title.line1')}{' '}
-                  <span className="gradient-text">{t('hero.title.highlight')}</span>{' '}
-                  {t('hero.title.line2')}
+              <div className="space-y-8">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 animate-fade-in-up">
+                  <span className="block">{t('hero.title.line1')}</span>
+                  <span className="block gradient-text animate-fade-in-delay-2">{t('hero.title.highlight')}</span>
                 </h1>
-                <p className="text-xl text-gray-600 max-w-xl">
+                <p className="text-xl text-gray-600 max-w-xl animate-fade-in-delay-3">
                   {t('hero.subtitle')}
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/pricing" className="btn-primary">
+                <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-delay-4">
+                  <Link href="/pricing" className="btn-primary text-base px-8 py-4 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
                     {t('hero.cta.primary')}
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
-                  <Link href="/features" className="btn-secondary">
-                    <Play className="mr-2 h-4 w-4" />
+                  <Link href="/features" className="btn-secondary text-base px-8 py-4 hover:-translate-y-0.5 transition-all">
+                    <Play className="mr-2 h-5 w-5" />
                     {t('hero.cta.secondary')}
                   </Link>
                 </div>
-                <div className="flex items-center gap-8 pt-4">
+                <div className="flex flex-wrap items-center gap-6 pt-4 animate-fade-in-delay-5">
                   <div className="flex items-center gap-2 text-sm text-gray-600">
                     <CheckCircle className="h-5 w-5 text-green-500" />
                     {t('hero.badges.noCloud')}
@@ -64,14 +69,16 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <div className="relative lg:h-[500px] animate-in" style={{ animationDelay: '0.2s' }}>
-                <div className="absolute inset-0 bg-gradient-to-tr from-brand-100 to-accent-100 rounded-2xl transform rotate-3"></div>
-                <div className="relative bg-white rounded-2xl shadow-2xl p-6 h-full">
+              <div className="relative lg:h-[500px] animate-scale-in">
+                <div className="absolute inset-0 bg-gradient-to-tr from-brand-200 to-accent-200 rounded-2xl transform rotate-3 animate-float"></div>
+                <div className="relative bg-white rounded-2xl shadow-2xl p-6 h-full border border-gray-100">
                   {/* Placeholder for app screenshot/demo */}
-                  <div className="h-full flex items-center justify-center bg-gray-50 rounded-lg">
+                  <div className="h-full flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg">
                     <div className="text-center p-8">
-                      <FileText className="h-16 w-16 text-brand-500 mx-auto mb-4" />
-                      <p className="text-gray-500">{t('hero.demoPlaceholder')}</p>
+                      <div className="w-20 h-20 bg-brand-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <FileText className="h-10 w-10 text-brand-600" />
+                      </div>
+                      <p className="text-gray-500 font-medium">{t('hero.demoPlaceholder')}</p>
                     </div>
                   </div>
                 </div>
@@ -346,7 +353,7 @@ export default function HomePage() {
                     ))}
                   </div>
                   <blockquote className="text-gray-700 mb-6">
-                    "{testimonial.quote}"
+                    &ldquo;{testimonial.quote}&rdquo;
                   </blockquote>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center">

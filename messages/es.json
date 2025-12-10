@@ -10,13 +10,13 @@
   "home": {
     "hero": {
       "title": {
-        "line1": "Procesamiento de",
-        "highlight": "Facturas con IA",
-        "line2": "para ContPAQi"
+        "line1": "Deja de Teclear.",
+        "highlight": "Empieza a Crecer.",
+        "line2": ""
       },
-      "subtitle": "Automatiza tu flujo de trabajo contable mexicano. Extrae datos de facturas PDF, valida RFC y cumplimiento CFDI, y publica directamente en ContPAQi con asistencia de IA.",
+      "subtitle": "Deja que la IA maneje tu captura de facturas. Extrae datos de PDFs en segundos, valida RFC automáticamente, y publica directo en ContPAQi mientras te enfocas en lo que importa.",
       "cta": {
-        "primary": "Comenzar",
+        "primary": "Prueba Gratis",
         "secondary": "Ver Demo"
       },
       "badges": {
