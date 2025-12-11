@@ -27,6 +27,7 @@ export function Footer() {
     legal: [
       { name: t('links.privacy'), href: '/privacy' },
       { name: t('links.terms'), href: '/terms' },
+      { name: t('links.refunds'), href: '/refunds' },
       { name: t('links.license'), href: '/license' },
     ],
   };
