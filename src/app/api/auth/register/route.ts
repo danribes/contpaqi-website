@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { db } from '@/lib/db';
 import { hashPassword } from '@/lib/auth';
+import { sendWelcomeEmail } from '@/lib/email';
 
 const registerSchema = z.object({
   name: z.string().min(1, 'Name is required'),
@@ -40,7 +41,8 @@ export async function POST(request: NextRequest) {
       },
     });
 
-    // TODO: Send verification email
+    // Send welcome email
+    await sendWelcomeEmail(user.email, user.name || 'User');
 
     return NextResponse.json({
       success: true,
