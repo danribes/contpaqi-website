@@ -621,7 +621,9 @@
         "description": "For IT departments. Supports unattended installation.",
         "button": "Download Silent"
       },
-      "releaseNotes": "View Release Notes"
+      "releaseNotes": "View Release Notes",
+      "checksum": "File Verification (SHA-256)",
+      "copyChecksum": "Copy checksum"
     },
     "requirements": {
       "title": "System Requirements",
