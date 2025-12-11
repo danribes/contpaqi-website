@@ -290,11 +290,13 @@
       "id": 26,
       "title": "Set Up Error Monitoring (Sentry)",
       "description": "Configure Sentry for error tracking and performance monitoring in production",
-      "status": "pending",
+      "status": "completed",
+      "completedAt": "2025-12-11",
       "dependencies": [],
       "priority": "medium",
       "details": "Install @sentry/nextjs. Run Sentry wizard for initial setup. Configure sentry.client.config.ts and sentry.server.config.ts. Add SENTRY_DSN to environment variables. Set up source maps for better stack traces. Configure alerting rules.",
-      "testStrategy": "Trigger test error. Verify it appears in Sentry dashboard with proper context."
+      "testStrategy": "Trigger test error. Verify it appears in Sentry dashboard with proper context.",
+      "implementationDetails": "Installed @sentry/nextjs. Created sentry.client.config.ts with session replay, error filtering, and production-only mode. Created sentry.server.config.ts with console capture integration. Created src/instrumentation.ts for Next.js server instrumentation. Created src/components/error/ErrorBoundary.tsx with Sentry error reporting and fallback UI. Created src/app/global-error.tsx for root-level error handling. Updated next.config.js with withSentryConfig wrapper, source map upload, and tunnel route. 15 tests passing."
     },
     {
       "id": 27,
