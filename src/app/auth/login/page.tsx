@@ -1,14 +1,17 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { Mail, Lock, Loader2, ArrowRight } from 'lucide-react';
+import { signIn } from 'next-auth/react';
+import { Mail, Lock, Loader2, ArrowRight, AlertCircle } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 
 export default function LoginPage() {
   const t = useTranslations('auth');
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -22,12 +25,19 @@ export default function LoginPage() {
     const password = formData.get('password') as string;
 
     try {
-      // TODO: Implement actual authentication with NextAuth
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const result = await signIn('credentials', {
+        email,
+        password,
+        redirect: false,
+      });
 
-      // Redirect to portal on success
-      window.location.href = '/portal';
-    } catch (err) {
+      if (result?.error) {
+        setError(t('login.error'));
+      } else {
+        router.push('/portal');
+        router.refresh();
+      }
+    } catch {
       setError(t('login.error'));
     } finally {
       setIsLoading(false);
@@ -49,11 +59,12 @@ export default function LoginPage() {
             </p>
           </div>
 
-          <div className="card">
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               {error && (
-                <div className="bg-red-50 text-red-600 p-3 rounded-lg text-sm">
-                  {error}
+                <div className="flex items-center gap-3 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700">
+                  <AlertCircle className="h-5 w-5 flex-shrink-0" />
+                  <span className="text-sm">{error}</span>
                 </div>
               )}
 

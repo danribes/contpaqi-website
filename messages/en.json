@@ -512,6 +512,24 @@
         "message": "We've sent a password reset link to your email address.",
         "backToLogin": "Back to login"
       }
+    },
+    "resetPassword": {
+      "title": "Create New Password",
+      "subtitle": "Enter your new password below",
+      "newPassword": "New Password",
+      "newPasswordPlaceholder": "Enter new password (8+ characters)",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Confirm your new password",
+      "resetButton": "Reset Password",
+      "resetting": "Resetting...",
+      "error": "Failed to reset password",
+      "invalidLink": "Invalid Reset Link",
+      "invalidLinkMessage": "This password reset link is invalid or has expired.",
+      "requestNew": "Request New Link",
+      "success": {
+        "title": "Password Reset!",
+        "message": "Your password has been successfully reset. You can now sign in with your new password."
+      }
     }
   },
   "portal": {

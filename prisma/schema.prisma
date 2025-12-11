@@ -19,6 +19,8 @@ model User {
   id            String    @id @default(cuid())
   email         String    @unique
   name          String?
+  password      String?   // Hashed password for credentials auth
+  company       String?   // Company name
   emailVerified DateTime?
   image         String?
   createdAt     DateTime  @default(now())
@@ -71,6 +73,17 @@ model VerificationToken {
 
   @@unique([identifier, token])
   @@map("verification_tokens")
+}
+
+model PasswordResetToken {
+  id        String   @id @default(cuid())
+  email     String
+  token     String   @unique
+  expires   DateTime
+  createdAt DateTime @default(now())
+
+  @@unique([email, token])
+  @@map("password_reset_tokens")
 }
 
 // -----------------

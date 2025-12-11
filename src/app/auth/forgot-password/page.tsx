@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { Mail, Loader2, ArrowLeft, CheckCircle } from 'lucide-react';
+import { Mail, Loader2, ArrowLeft, CheckCircle, AlertCircle } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 
@@ -22,12 +22,20 @@ export default function ForgotPasswordPage() {
     const email = formData.get('email') as string;
 
     try {
-      // TODO: Implement actual password reset
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const response = await fetch('/api/auth/forgot-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.error || 'Failed to send reset link');
+      }
 
       setSuccess(true);
     } catch (err) {
-      setError(t('forgotPassword.error'));
+      setError(err instanceof Error ? err.message : t('forgotPassword.error'));
     } finally {
       setIsLoading(false);
     }
@@ -39,7 +47,7 @@ export default function ForgotPasswordPage() {
         <Header />
         <main className="flex-1 flex items-center justify-center py-12 px-4">
           <div className="w-full max-w-md text-center">
-            <div className="card">
+            <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-6">
                 <CheckCircle className="h-8 w-8 text-green-600" />
               </div>
@@ -49,7 +57,7 @@ export default function ForgotPasswordPage() {
               <p className="text-gray-600 mb-6">
                 {t('forgotPassword.success.message')}
               </p>
-              <Link href="/auth/login" className="btn-secondary">
+              <Link href="/auth/login" className="btn-secondary inline-flex items-center justify-center">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 {t('forgotPassword.success.backToLogin')}
               </Link>
@@ -76,11 +84,12 @@ export default function ForgotPasswordPage() {
             </p>
           </div>
 
-          <div className="card">
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               {error && (
-                <div className="bg-red-50 text-red-600 p-3 rounded-lg text-sm">
-                  {error}
+                <div className="flex items-center gap-3 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700">
+                  <AlertCircle className="h-5 w-5 flex-shrink-0" />
+                  <span className="text-sm">{error}</span>
                 </div>
               )}
 

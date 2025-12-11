@@ -512,6 +512,24 @@
         "message": "Hemos enviado un enlace de restablecimiento a tu correo electrónico.",
         "backToLogin": "Volver al inicio de sesión"
       }
+    },
+    "resetPassword": {
+      "title": "Crear Nueva Contraseña",
+      "subtitle": "Ingresa tu nueva contraseña a continuación",
+      "newPassword": "Nueva Contraseña",
+      "newPasswordPlaceholder": "Ingresa nueva contraseña (8+ caracteres)",
+      "confirmPassword": "Confirmar Contraseña",
+      "confirmPasswordPlaceholder": "Confirma tu nueva contraseña",
+      "resetButton": "Restablecer Contraseña",
+      "resetting": "Restableciendo...",
+      "error": "Error al restablecer la contraseña",
+      "invalidLink": "Enlace Inválido",
+      "invalidLinkMessage": "Este enlace de restablecimiento es inválido o ha expirado.",
+      "requestNew": "Solicitar Nuevo Enlace",
+      "success": {
+        "title": "¡Contraseña Restablecida!",
+        "message": "Tu contraseña ha sido restablecida exitosamente. Ahora puedes iniciar sesión con tu nueva contraseña."
+      }
     }
   },
   "portal": {
