@@ -17,7 +17,11 @@ import {
   Play,
   ChevronDown,
   Calculator,
-  Building2
+  Building2,
+  BadgeCheck,
+  Gauge,
+  Layers,
+  Link2
 } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -314,53 +318,61 @@ export default function HomePage() {
                 {t('features.subtitle')}
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {[
                 {
                   icon: Cpu,
-                  title: t('features.items.ai.title'),
-                  description: t('features.items.ai.description'),
+                  title: t('features.items.aiOcr.title'),
+                  description: t('features.items.aiOcr.description'),
+                  color: 'brand',
                 },
                 {
-                  icon: Table,
-                  title: t('features.items.tables.title'),
-                  description: t('features.items.tables.description'),
+                  icon: BadgeCheck,
+                  title: t('features.items.rfcValidation.title'),
+                  description: t('features.items.rfcValidation.description'),
+                  color: 'green',
                 },
                 {
-                  icon: Eye,
-                  title: t('features.items.review.title'),
-                  description: t('features.items.review.description'),
+                  icon: Calculator,
+                  title: t('features.items.ivaCalculation.title'),
+                  description: t('features.items.ivaCalculation.description'),
+                  color: 'purple',
                 },
                 {
-                  icon: Shield,
-                  title: t('features.items.security.title'),
-                  description: t('features.items.security.description'),
+                  icon: Gauge,
+                  title: t('features.items.confidenceScoring.title'),
+                  description: t('features.items.confidenceScoring.description'),
+                  color: 'orange',
                 },
                 {
-                  icon: FileText,
-                  title: t('features.items.cfdi.title'),
-                  description: t('features.items.cfdi.description'),
+                  icon: Layers,
+                  title: t('features.items.batchProcessing.title'),
+                  description: t('features.items.batchProcessing.description'),
+                  color: 'blue',
                 },
                 {
-                  icon: Zap,
-                  title: t('features.items.integration.title'),
-                  description: t('features.items.integration.description'),
+                  icon: Link2,
+                  title: t('features.items.contpaqiIntegration.title'),
+                  description: t('features.items.contpaqiIntegration.description'),
+                  color: 'brand',
                 },
               ].map((feature, index) => (
                 <div
                   key={index}
-                  className="card hover:shadow-lg transition-shadow"
+                  className="group card hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-t-4 border-t-transparent hover:border-t-brand-500"
                 >
-                  <feature.icon className="h-10 w-10 text-brand-500 mb-4" />
+                  <div className="w-14 h-14 rounded-xl bg-brand-50 group-hover:bg-brand-100 flex items-center justify-center mb-5 transition-colors">
+                    <feature.icon className="h-7 w-7 text-brand-600" />
+                  </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
                 </div>
               ))}
             </div>
             <div className="text-center mt-12">
-              <Link href="/features" className="btn-secondary">
+              <Link href="/features" className="btn-secondary inline-flex items-center">
                 {t('features.cta')}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>

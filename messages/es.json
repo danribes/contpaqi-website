@@ -93,29 +93,29 @@
       "title": "Características Poderosas",
       "subtitle": "Todo lo que necesitas para optimizar tu flujo de trabajo contable",
       "items": {
-        "ai": {
+        "aiOcr": {
           "title": "OCR con IA",
-          "description": "Modelos avanzados de aprendizaje automático extraen datos con alta precisión"
+          "description": "Aprendizaje automático avanzado extrae texto de cualquier PDF con 99%+ de precisión"
         },
-        "tables": {
-          "title": "Detección de Tablas",
-          "description": "Detecta y extrae automáticamente líneas de productos de las tablas de facturas"
+        "rfcValidation": {
+          "title": "Validación de RFC",
+          "description": "Verificación automática de números RFC mexicanos contra la base de datos del SAT"
         },
-        "review": {
-          "title": "Revisión Humana",
-          "description": "Revisa y corrige extracciones con resaltado de confianza"
+        "ivaCalculation": {
+          "title": "Cálculo de IVA",
+          "description": "Cálculos automáticos de impuestos con soporte para todas las tasas de IVA mexicanas"
         },
-        "security": {
-          "title": "Procesamiento Local",
-          "description": "Todos los datos permanecen en tu máquina - nada se envía a la nube"
+        "confidenceScoring": {
+          "title": "Puntuación de Confianza",
+          "description": "Ve exactamente qué tan segura está la IA sobre cada campo extraído"
         },
-        "cfdi": {
-          "title": "Cumplimiento CFDI",
-          "description": "Valida facturas electrónicas mexicanas con verificación de RFC"
+        "batchProcessing": {
+          "title": "Procesamiento por Lotes",
+          "description": "Procesa cientos de facturas a la vez con gestión de cola"
         },
-        "integration": {
-          "title": "Integración Directa",
-          "description": "Publica pólizas directamente en ContPAQi a través del SDK oficial"
+        "contpaqiIntegration": {
+          "title": "Integración ContPAQi",
+          "description": "Publicación directa a ContPAQi Comercial y Contabilidad vía SDK oficial"
         }
       },
       "cta": "Ver Todas las Características"
