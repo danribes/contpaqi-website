@@ -18,6 +18,8 @@
     "@auth/prisma-adapter": "^2.0.0",
     "@prisma/client": "^5.22.0",
     "@stripe/stripe-js": "^4.9.0",
+    "@types/bcryptjs": "^2.4.6",
+    "bcryptjs": "^3.0.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.460.0",
