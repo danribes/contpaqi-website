@@ -481,30 +481,69 @@ export default function HomePage() {
         </section>
 
         {/* Pricing Preview */}
-        <section className="py-20 bg-gray-50">
-          <div className="container-custom text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              {t('pricingPreview.title')}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-              {t('pricingPreview.subtitle')}
-            </p>
-            <div className="inline-flex items-baseline gap-1 mb-8">
-              <span className="text-sm text-gray-500">{t('pricingPreview.from')}</span>
-              <span className="text-5xl font-bold text-gray-900">$49</span>
-              <span className="text-gray-500">/{t('pricingPreview.month')}</span>
-            </div>
-            <div>
-              <Link href="/pricing" className="btn-primary inline-flex items-center">
-                {t('pricingPreview.cta')}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+        <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-brand-50">
+          <div className="container-custom">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                  {t('pricingPreview.title')}
+                </h2>
+                <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                  {t('pricingPreview.subtitle')}
+                </p>
+              </div>
+
+              {/* Pricing Card */}
+              <div className="relative bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+                {/* Top gradient bar */}
+                <div className="h-2 bg-gradient-to-r from-brand-500 via-brand-600 to-accent-500" />
+
+                <div className="p-8 sm:p-12">
+                  <div className="grid md:grid-cols-2 gap-8 items-center">
+                    {/* Pricing Info */}
+                    <div className="text-center md:text-left">
+                      <p className="text-sm font-medium text-brand-600 uppercase tracking-wider mb-2">
+                        {t('pricingPreview.from')}
+                      </p>
+                      <div className="flex items-baseline justify-center md:justify-start gap-1 mb-4">
+                        <span className="text-6xl font-bold text-gray-900">$49</span>
+                        <span className="text-xl text-gray-500">/{t('pricingPreview.month')}</span>
+                      </div>
+                      <p className="text-gray-600 mb-6">
+                        All plans include 14-day free trial
+                      </p>
+                      <Link href="/pricing" className="btn-primary inline-flex items-center text-lg px-8 py-4 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
+                        {t('pricingPreview.cta')}
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </div>
+
+                    {/* Key Features */}
+                    <div className="space-y-4">
+                      {[
+                        'AI-powered invoice extraction',
+                        'RFC validation & IVA calculation',
+                        'Direct ContPAQi integration',
+                        '100% local processing',
+                        'Email support included',
+                      ].map((feature, idx) => (
+                        <div key={idx} className="flex items-center gap-3">
+                          <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                            <CheckCircle className="h-4 w-4 text-green-600" />
+                          </div>
+                          <span className="text-gray-700">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gray-50">
           <div className="container-custom max-w-4xl">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -516,20 +555,37 @@ export default function HomePage() {
             </div>
             <div className="space-y-4">
               {[
-                { q: t('faq.items.1.question'), a: t('faq.items.1.answer') },
-                { q: t('faq.items.2.question'), a: t('faq.items.2.answer') },
-                { q: t('faq.items.3.question'), a: t('faq.items.3.answer') },
-                { q: t('faq.items.4.question'), a: t('faq.items.4.answer') },
-                { q: t('faq.items.5.question'), a: t('faq.items.5.answer') },
+                { q: t('faq.items.1.question'), a: t('faq.items.1.answer'), icon: Shield },
+                { q: t('faq.items.2.question'), a: t('faq.items.2.answer'), icon: Building2 },
+                { q: t('faq.items.3.question'), a: t('faq.items.3.answer'), icon: Zap },
+                { q: t('faq.items.4.question'), a: t('faq.items.4.answer'), icon: FileText },
+                { q: t('faq.items.5.question'), a: t('faq.items.5.answer'), icon: CheckCircle },
+                { q: t('faq.items.6.question'), a: t('faq.items.6.answer'), icon: Users },
               ].map((faq, index) => (
-                <details key={index} className="card group cursor-pointer">
-                  <summary className="flex items-center justify-between font-semibold text-gray-900 list-none">
-                    {faq.q}
-                    <ChevronDown className="h-5 w-5 text-gray-500 transition-transform group-open:rotate-180" />
+                <details key={index} className="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-brand-300 transition-colors">
+                  <summary className="flex items-center gap-4 p-5 cursor-pointer list-none">
+                    <div className="w-10 h-10 rounded-lg bg-brand-50 group-hover:bg-brand-100 flex items-center justify-center flex-shrink-0 transition-colors">
+                      <faq.icon className="h-5 w-5 text-brand-600" />
+                    </div>
+                    <span className="flex-1 font-semibold text-gray-900 text-left">
+                      {faq.q}
+                    </span>
+                    <ChevronDown className="h-5 w-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0" />
                   </summary>
-                  <p className="mt-4 text-gray-600">{faq.a}</p>
+                  <div className="px-5 pb-5 pl-[4.5rem]">
+                    <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+                  </div>
                 </details>
               ))}
+            </div>
+
+            {/* Contact CTA */}
+            <div className="mt-12 text-center">
+              <p className="text-gray-600 mb-4">Still have questions?</p>
+              <Link href="/contact" className="btn-secondary inline-flex items-center">
+                Contact Us
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </div>
           </div>
         </section>
