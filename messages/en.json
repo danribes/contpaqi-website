@@ -69,7 +69,7 @@
     },
     "howItWorks": {
       "title": "How It Works",
-      "subtitle": "Three simple steps to automate your invoice processing",
+      "subtitle": "Four simple steps to automate your invoice processing",
       "steps": {
         "upload": {
           "title": "Upload Invoice",
@@ -79,9 +79,13 @@
           "title": "AI Extraction",
           "description": "Our AI extracts all data including tables, RFC, amounts, and validates CFDI"
         },
+        "review": {
+          "title": "Review with Confidence",
+          "description": "See confidence scores for each field, make corrections with side-by-side view"
+        },
         "post": {
           "title": "Post to ContPAQi",
-          "description": "Review the extracted data and post directly to your ContPAQi system"
+          "description": "One click to post the validated entry directly to your ContPAQi system"
         }
       }
     },

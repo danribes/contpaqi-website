@@ -235,41 +235,70 @@ export default function HomePage() {
                 {t('howItWorks.subtitle')}
               </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: FileText,
-                  step: '1',
-                  title: t('howItWorks.steps.upload.title'),
-                  description: t('howItWorks.steps.upload.description'),
-                },
-                {
-                  icon: Cpu,
-                  step: '2',
-                  title: t('howItWorks.steps.extract.title'),
-                  description: t('howItWorks.steps.extract.description'),
-                },
-                {
-                  icon: Zap,
-                  step: '3',
-                  title: t('howItWorks.steps.post.title'),
-                  description: t('howItWorks.steps.post.description'),
-                },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="relative card text-center hover:shadow-lg transition-shadow"
-                >
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-brand-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
-                    {item.step}
+
+            {/* Steps Container */}
+            <div className="relative">
+              {/* Connecting Line (visible on lg+) */}
+              <div className="hidden lg:block absolute top-[3.5rem] left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-brand-200 via-brand-400 to-brand-200" />
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+                {[
+                  {
+                    icon: FileText,
+                    step: '1',
+                    title: t('howItWorks.steps.upload.title'),
+                    description: t('howItWorks.steps.upload.description'),
+                  },
+                  {
+                    icon: Cpu,
+                    step: '2',
+                    title: t('howItWorks.steps.extract.title'),
+                    description: t('howItWorks.steps.extract.description'),
+                  },
+                  {
+                    icon: Eye,
+                    step: '3',
+                    title: t('howItWorks.steps.review.title'),
+                    description: t('howItWorks.steps.review.description'),
+                  },
+                  {
+                    icon: Zap,
+                    step: '4',
+                    title: t('howItWorks.steps.post.title'),
+                    description: t('howItWorks.steps.post.description'),
+                  },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="relative flex flex-col items-center text-center group"
+                  >
+                    {/* Step Number Badge */}
+                    <div className="relative z-10 mb-6">
+                      <div className="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center border-2 border-brand-100 group-hover:border-brand-400 transition-colors">
+                        <item.icon className="h-8 w-8 text-brand-600" />
+                      </div>
+                      <div className="absolute -top-2 -right-2 w-7 h-7 bg-brand-600 text-white rounded-full flex items-center justify-center font-bold text-sm shadow-md">
+                        {item.step}
+                      </div>
+                    </div>
+
+                    {/* Arrow for md screens (2-column layout) */}
+                    {index < 3 && index !== 1 && (
+                      <div className="hidden md:flex lg:hidden absolute -right-4 top-8 z-20">
+                        <ArrowRight className="h-6 w-6 text-brand-400" />
+                      </div>
+                    )}
+
+                    {/* Content Card */}
+                    <div className="card flex-1 w-full hover:shadow-lg transition-all hover:-translate-y-1">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-gray-600">{item.description}</p>
+                    </div>
                   </div>
-                  <item.icon className="h-12 w-12 text-brand-500 mx-auto mb-4 mt-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600">{item.description}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </section>
