@@ -81,3 +81,28 @@ export function isYearlyPrice(priceId: string): boolean {
     priceId === PRICES.PROFESSIONAL_YEARLY
   );
 }
+
+/**
+ * Get price ID from plan name and billing interval
+ */
+export function getPriceId(
+  plan: 'starter' | 'professional',
+  interval: 'monthly' | 'yearly'
+): string | null {
+  const planKey = plan.toUpperCase() as keyof typeof PLANS;
+  const planConfig = PLANS[planKey];
+
+  if (!planConfig) {
+    return null;
+  }
+
+  return planConfig.prices[interval] || null;
+}
+
+/**
+ * Get plan details for display
+ */
+export function getPlanDetails(plan: 'starter' | 'professional') {
+  const planKey = plan.toUpperCase() as keyof typeof PLANS;
+  return PLANS[planKey] || null;
+}
