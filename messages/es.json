@@ -535,19 +535,33 @@
   "portal": {
     "welcome": "Bienvenido de nuevo",
     "subtitle": "Administra tu licencia y configuración de cuenta",
+    "nav": {
+      "dashboard": "Panel",
+      "licenses": "Licencias",
+      "download": "Descargar",
+      "billing": "Facturación",
+      "settings": "Configuración",
+      "backToSite": "Volver al Sitio",
+      "signOut": "Cerrar Sesión"
+    },
     "license": {
       "title": "Licencia",
       "key": "Clave de Licencia",
       "plan": "Plan",
       "machines": "Máquinas",
       "expires": "Expira",
-      "active": "Activa"
+      "active": "Activa",
+      "trial": "Prueba",
+      "noLicense": "Sin Licencia Activa",
+      "noLicenseMessage": "Aún no tienes una licencia activa. Comienza con un plan para acceder a todas las funciones.",
+      "getPlan": "Ver Planes"
     },
     "machines": {
       "title": "Máquinas Activadas",
       "activated": "activadas",
       "lastSeen": "Última vez",
-      "noMachines": "No hay máquinas activadas aún"
+      "noMachines": "No hay máquinas activadas aún",
+      "deactivate": "Desactivar"
     },
     "quickActions": {
       "title": "Acciones Rápidas",

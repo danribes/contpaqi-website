@@ -535,19 +535,33 @@
   "portal": {
     "welcome": "Welcome back",
     "subtitle": "Manage your license and account settings",
+    "nav": {
+      "dashboard": "Dashboard",
+      "licenses": "Licenses",
+      "download": "Download",
+      "billing": "Billing",
+      "settings": "Settings",
+      "backToSite": "Back to Site",
+      "signOut": "Sign Out"
+    },
     "license": {
       "title": "License",
       "key": "License Key",
       "plan": "Plan",
       "machines": "Machines",
       "expires": "Expires",
-      "active": "Active"
+      "active": "Active",
+      "trial": "Trial",
+      "noLicense": "No Active License",
+      "noLicenseMessage": "You don't have an active license yet. Get started with a plan to access all features.",
+      "getPlan": "View Plans"
     },
     "machines": {
       "title": "Activated Machines",
       "activated": "activated",
       "lastSeen": "Last seen",
-      "noMachines": "No machines activated yet"
+      "noMachines": "No machines activated yet",
+      "deactivate": "Deactivate"
     },
     "quickActions": {
       "title": "Quick Actions",
