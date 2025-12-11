@@ -21,14 +21,12 @@ describe('Sitemap Generation', () => {
   const locales = ['en', 'es'];
 
   // Using a simple type to avoid MetadataRoute.Sitemap complexity
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let sitemap: Array<{
     url: string;
     lastModified?: string | Date;
     changeFrequency?: string;
     priority?: number;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    alternates?: any;
+    alternates?: Record<string, string>;
   }>;
 
   beforeEach(async () => {
