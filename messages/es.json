@@ -69,7 +69,7 @@
     },
     "howItWorks": {
       "title": "Cómo Funciona",
-      "subtitle": "Tres simples pasos para automatizar tu procesamiento de facturas",
+      "subtitle": "Cuatro simples pasos para automatizar tu procesamiento de facturas",
       "steps": {
         "upload": {
           "title": "Sube la Factura",
@@ -79,9 +79,13 @@
           "title": "Extracción con IA",
           "description": "Nuestra IA extrae todos los datos incluyendo tablas, RFC, montos y valida CFDI"
         },
+        "review": {
+          "title": "Revisa con Confianza",
+          "description": "Ve puntuaciones de confianza para cada campo, haz correcciones con vista lado a lado"
+        },
         "post": {
           "title": "Publica en ContPAQi",
-          "description": "Revisa los datos extraídos y publica directamente en tu sistema ContPAQi"
+          "description": "Un clic para publicar la póliza validada directamente en tu sistema ContPAQi"
         }
       }
     },
