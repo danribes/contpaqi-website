@@ -63,7 +63,8 @@ describe('File Storage for Downloads', () => {
     it('should have download types defined', () => {
       const typesPath = path.join(rootDir, 'src', 'lib', 'storage.ts');
       const content = fs.readFileSync(typesPath, 'utf-8');
-      expect(content).toContain('DownloadFile') || expect(content).toContain('interface');
+      const hasTypes = content.includes('DownloadFile') || content.includes('interface');
+      expect(hasTypes).toBe(true);
     });
   });
 
@@ -71,7 +72,8 @@ describe('File Storage for Downloads', () => {
     it('storage library should support URL expiration', async () => {
       const storagePath = path.join(rootDir, 'src', 'lib', 'storage.ts');
       const content = fs.readFileSync(storagePath, 'utf-8');
-      expect(content).toContain('expir') || expect(content).toContain('ttl');
+      const hasExpiration = content.includes('expir') || content.includes('ttl');
+      expect(hasExpiration).toBe(true);
     });
 
     it('generateSignedUrl should accept expiration parameter', async () => {
@@ -85,7 +87,8 @@ describe('File Storage for Downloads', () => {
     it('should have available downloads configuration', () => {
       const storagePath = path.join(rootDir, 'src', 'lib', 'storage.ts');
       const content = fs.readFileSync(storagePath, 'utf-8');
-      expect(content).toContain('AVAILABLE_DOWNLOADS') || expect(content).toContain('downloads');
+      const hasConfig = content.includes('AVAILABLE_DOWNLOADS') || content.includes('downloads');
+      expect(hasConfig).toBe(true);
     });
   });
 });

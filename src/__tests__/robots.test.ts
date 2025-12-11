@@ -1,26 +1,35 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
+import type { MetadataRoute } from 'next';
 
 // We'll test the robots.txt generation function
 // The robots.ts file will export a default function that returns MetadataRoute.Robots
 
+type RobotsRules = {
+  rules: Array<{
+    userAgent: string | string[];
+    allow?: string | string[];
+    disallow?: string | string[];
+  }>;
+  sitemap?: string | string[];
+  host?: string;
+};
+
 describe('Robots.txt Generation', () => {
   const BASE_URL = 'https://contpaqi-ai-bridge.com';
 
-  let robots: {
-    rules: Array<{
-      userAgent: string | string[];
-      allow?: string | string[];
-      disallow?: string | string[];
-    }>;
-    sitemap?: string | string[];
-    host?: string;
-  };
+  let robots: RobotsRules;
 
   beforeEach(async () => {
     // Dynamically import the robots to get fresh results
     vi.resetModules();
     const robotsModule = await import('@/app/robots');
-    robots = robotsModule.default();
+    const result = robotsModule.default();
+    // Convert MetadataRoute.Robots to our expected type
+    robots = {
+      rules: Array.isArray(result.rules) ? result.rules : [result.rules],
+      sitemap: result.sitemap,
+      host: result.host,
+    } as RobotsRules;
   });
 
   describe('Structure', () => {
