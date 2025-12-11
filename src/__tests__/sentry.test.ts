@@ -38,7 +38,8 @@ describe('Sentry Error Monitoring', () => {
     it('sentry.client.config.ts should reference DSN from environment', () => {
       const configPath = path.join(rootDir, 'sentry.client.config.ts');
       const content = fs.readFileSync(configPath, 'utf-8');
-      expect(content).toContain('SENTRY_DSN') || expect(content).toContain('NEXT_PUBLIC_SENTRY_DSN');
+      const hasDSN = content.includes('SENTRY_DSN') || content.includes('NEXT_PUBLIC_SENTRY_DSN');
+      expect(hasDSN).toBe(true);
     });
   });
 
@@ -112,7 +113,8 @@ describe('Sentry Error Monitoring', () => {
     it('next.config.js should have Sentry webpack plugin', () => {
       const configPath = path.join(rootDir, 'next.config.js');
       const content = fs.readFileSync(configPath, 'utf-8');
-      expect(content).toContain('withSentryConfig') || expect(content).toContain('@sentry/nextjs');
+      const hasSentry = content.includes('withSentryConfig') || content.includes('@sentry/nextjs');
+      expect(hasSentry).toBe(true);
     });
   });
 });

@@ -1,5 +1,7 @@
 # ContPAQi AI Bridge - Sales Website
 
+[![CI](https://github.com/danribes/contpaqi-website/actions/workflows/ci.yml/badge.svg)](https://github.com/danribes/contpaqi-website/actions/workflows/ci.yml)
+
 Sales and marketing website for ContPAQi AI Bridge, featuring product information, pricing, payment processing, license delivery, and customer portal.
 
 ## Tech Stack
