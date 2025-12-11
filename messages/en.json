@@ -579,6 +579,28 @@
       "title": "Need Help?",
       "description": "Our support team is ready to assist you with any questions.",
       "contact": "Contact Support"
+    },
+    "licensesPage": {
+      "title": "License Management",
+      "subtitle": "View and manage your ContPAQi AI Bridge licenses and activated machines",
+      "createdAt": "Created",
+      "showKey": "Show license key",
+      "hideKey": "Hide license key",
+      "copyKey": "Copy license key",
+      "invoicesLimit": "Invoices/Month",
+      "unlimited": "Unlimited",
+      "unknownMachine": "Unknown Machine",
+      "activatedOn": "Activated",
+      "confirmDeactivate": "Are you sure you want to deactivate this machine? You can re-activate it later.",
+      "status": {
+        "expired": "Expired",
+        "revoked": "Revoked"
+      },
+      "help": {
+        "title": "Need Help with Licensing?",
+        "description": "Learn how to activate, deactivate, or transfer your license to another machine.",
+        "downloadGuide": "Download Guide"
+      }
     }
   },
   "download": {
