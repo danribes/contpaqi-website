@@ -3,7 +3,7 @@
     "projectName": "ContPAQi AI Bridge Sales Website",
     "version": "1.0.0",
     "generatedAt": "2025-12-10T23:00:00.000Z",
-    "updatedAt": "2025-12-11T08:25:00.000Z"
+    "updatedAt": "2025-12-11T08:40:00.000Z"
   },
   "tasks": [
     {
@@ -321,6 +321,58 @@
       "details": "Deploy to Vercel. Configure custom domain and SSL. Set all production environment variables. Test complete purchase flow with Stripe test mode then live mode. Verify email delivery. Test license activation. Run Lighthouse audit for performance. Check SEO with Google Search Console.",
       "testStrategy": "Complete end-to-end purchase flow. Verify all emails delivered. Test portal access. Check analytics and error tracking.",
       "implementationDetails": "Created comprehensive deployment verification test suite (src/__tests__/deployment-verification.test.ts) with 47 tests covering: environment configuration, SEO metadata, core pages, legal pages, API routes, authentication, customer portal, error handling, analytics, internationalization, database, storage, email, build configuration, deployment readiness, and checkout flow. All tests pass, confirming the application is ready for production deployment. Log files document next steps for live deployment including Vercel setup, domain configuration, and third-party service activation."
+    },
+    {
+      "id": 29,
+      "title": "Create Vercel Configuration",
+      "description": "Create vercel.json with optimized settings for production deployment including build settings, redirects, headers, and cron jobs",
+      "status": "completed",
+      "completedAt": "2025-12-11",
+      "dependencies": [28],
+      "priority": "high",
+      "details": "Create vercel.json with: build command configuration, output directory settings, environment variable references, region configuration (prefer US for Stripe), function timeout settings, security headers (CSP, HSTS, X-Frame-Options), redirects for old URLs if needed, rewrites for clean URLs, cron job configuration for scheduled tasks (license expiry checks, cleanup).",
+      "testStrategy": "Verify vercel.json is valid JSON. Test build locally with vercel dev. Check headers are applied correctly.",
+      "implementationDetails": "Created vercel.json with: framework=nextjs, region=iad1 (US East), security headers (X-Frame-Options, X-Content-Type-Options, HSTS, Referrer-Policy, Permissions-Policy), cache headers for static assets, API function timeouts (30s standard, 60s webhooks/cron), cron jobs for license-check (daily 6AM) and cleanup (weekly Sunday 3AM), Spanish URL redirects. Created src/app/api/cron/license-check/route.ts and cleanup/route.ts endpoints. Added CRON_SECRET to .env.example. 18 tests passing."
+    },
+    {
+      "id": 30,
+      "title": "Set Up CI/CD Pipeline",
+      "description": "Create GitHub Actions workflows for automated testing, linting, and deployment preview",
+      "status": "pending",
+      "dependencies": [29],
+      "priority": "high",
+      "details": "Create .github/workflows/ci.yml for: running tests on PR, linting checks, TypeScript type checking, build verification. Create preview deployment workflow. Add status badges to README. Configure branch protection rules documentation.",
+      "testStrategy": "Push to feature branch and verify CI runs. Check all status checks pass. Verify PR preview deployments work."
+    },
+    {
+      "id": 31,
+      "title": "Create Database Migration Scripts",
+      "description": "Set up Prisma migrations and seed scripts for production database initialization",
+      "status": "pending",
+      "dependencies": [29],
+      "priority": "high",
+      "details": "Create initial Prisma migration from current schema. Create seed script for default data (admin user, sample downloads). Add npm scripts for migration commands. Document database backup and restore procedures. Create health check endpoint for database connectivity.",
+      "testStrategy": "Run migration on fresh database. Verify all tables created. Test seed script populates expected data."
+    },
+    {
+      "id": 32,
+      "title": "Create Deployment Documentation",
+      "description": "Create comprehensive deployment guide with step-by-step instructions for all environments",
+      "status": "pending",
+      "dependencies": [29, 30, 31],
+      "priority": "medium",
+      "details": "Create DEPLOYMENT.md with: prerequisites checklist, step-by-step Vercel setup, environment variables reference with descriptions, Stripe configuration guide, Resend email setup, Sentry configuration, domain and SSL setup, post-deployment verification steps, troubleshooting guide, rollback procedures.",
+      "testStrategy": "Follow documentation on fresh Vercel project. Verify all steps are accurate and complete."
+    },
+    {
+      "id": 33,
+      "title": "Production Build Verification",
+      "description": "Verify production build succeeds and passes all quality checks",
+      "status": "pending",
+      "dependencies": [29, 30, 31],
+      "priority": "high",
+      "details": "Run production build locally. Fix any build warnings or errors. Verify bundle size is optimized. Run Lighthouse audit on built version. Check for console errors. Verify all API routes work. Test with production environment variables. Create build verification test.",
+      "testStrategy": "npm run build succeeds without errors. Lighthouse scores above 90. No console errors in production mode."
     }
   ]
 }
