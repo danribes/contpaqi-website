@@ -125,25 +125,36 @@
       "subtitle": "See how ContPAQi AI Bridge is transforming accounting workflows across Mexico",
       "items": {
         "1": {
-          "name": "Maria Garcia",
+          "name": "María García",
           "role": "Senior Accountant",
-          "company": "Despacho Contable Garcia",
+          "company": "Despacho Contable García",
           "quote": "ContPAQi AI Bridge has transformed our workflow. What used to take hours now takes minutes. The accuracy is incredible.",
-          "result": "Saved 15 hours/week on data entry"
+          "result": "Saved 15 hours/week on data entry",
+          "initials": "MG"
         },
         "2": {
-          "name": "Carlos Rodriguez",
+          "name": "Carlos Rodríguez",
           "role": "Managing Partner",
-          "company": "Rodriguez y Asociados",
+          "company": "Rodríguez y Asociados",
           "quote": "We've been able to take on 40% more clients without hiring additional staff. The ROI was immediate.",
-          "result": "40% increase in client capacity"
+          "result": "40% increase in client capacity",
+          "initials": "CR"
         },
         "3": {
-          "name": "Ana Martinez",
+          "name": "Ana Martínez",
           "role": "CFO",
           "company": "Grupo Industrial del Norte",
           "quote": "The Mexican compliance features are perfect. RFC validation and IVA calculations are always accurate.",
-          "result": "Zero data entry errors in 6 months"
+          "result": "Zero data entry errors in 6 months",
+          "initials": "AM"
+        },
+        "4": {
+          "name": "Roberto Sánchez",
+          "role": "Accounting Director",
+          "company": "Servicios Fiscales Monterrey",
+          "quote": "The batch processing feature is a game-changer. We process over 200 invoices daily with just two staff members.",
+          "result": "200+ invoices processed daily",
+          "initials": "RS"
         }
       }
     },
