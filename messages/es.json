@@ -403,6 +403,8 @@
       "emailPlaceholder": "tu@empresa.com",
       "company": "Empresa (opcional)",
       "companyPlaceholder": "Nombre de tu empresa",
+      "phone": "Teléfono (opcional)",
+      "phonePlaceholder": "+52 555 123 4567",
       "subject": "Asunto",
       "subjectPlaceholder": "Selecciona un asunto",
       "subjects": {
@@ -417,8 +419,10 @@
       "sending": "Enviando...",
       "success": {
         "title": "¡Mensaje Enviado!",
-        "message": "Gracias por contactarnos. Te responderemos en un plazo de 24 horas."
-      }
+        "message": "Gracias por contactarnos. Te responderemos en un plazo de 24 horas.",
+        "sendAnother": "Enviar otro mensaje"
+      },
+      "error": "Error al enviar. Por favor intenta de nuevo."
     }
   },
   "footer": {

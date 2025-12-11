@@ -403,6 +403,8 @@
       "emailPlaceholder": "you@company.com",
       "company": "Company (optional)",
       "companyPlaceholder": "Your company name",
+      "phone": "Phone (optional)",
+      "phonePlaceholder": "+52 555 123 4567",
       "subject": "Subject",
       "subjectPlaceholder": "Select a subject",
       "subjects": {
@@ -417,8 +419,10 @@
       "sending": "Sending...",
       "success": {
         "title": "Message Sent!",
-        "message": "Thank you for reaching out. We'll get back to you within 24 hours."
-      }
+        "message": "Thank you for reaching out. We'll get back to you within 24 hours.",
+        "sendAnother": "Send another message"
+      },
+      "error": "Failed to submit. Please try again."
     }
   },
   "footer": {

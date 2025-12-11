@@ -219,6 +219,7 @@ model ContactSubmission {
   name      String
   email     String
   company   String?
+  phone     String?
   subject   String
   message   String       @db.Text
   status    TicketStatus @default(OPEN)
