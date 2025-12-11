@@ -591,22 +591,75 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-brand-600">
-          <div className="container-custom text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              {t('cta.title')}
-            </h2>
-            <p className="text-xl text-brand-100 max-w-2xl mx-auto mb-8">
-              {t('cta.subtitle')}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/pricing"
-                className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-lg font-semibold text-brand-600 shadow-lg hover:bg-gray-100 transition-colors"
-              >
-                {t('cta.button')}
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+        <section className="relative py-24 overflow-hidden">
+          {/* Gradient Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-600 via-brand-700 to-brand-800" />
+
+          {/* Decorative Elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute -top-24 -left-24 w-96 h-96 bg-brand-500 rounded-full opacity-20 blur-3xl" />
+            <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-accent-500 rounded-full opacity-20 blur-3xl" />
+            <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-white rounded-full opacity-5 blur-2xl" />
+          </div>
+
+          {/* Grid Pattern Overlay */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0" style={{
+              backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)',
+              backgroundSize: '40px 40px'
+            }} />
+          </div>
+
+          <div className="container-custom relative">
+            <div className="max-w-3xl mx-auto text-center">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-8 border border-white/20">
+                <Zap className="h-4 w-4 text-yellow-400" />
+                <span className="text-sm font-medium text-white">14-Day Free Trial</span>
+              </div>
+
+              {/* Heading */}
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                {t('cta.title')}
+              </h2>
+
+              {/* Subtitle */}
+              <p className="text-xl text-brand-100 max-w-2xl mx-auto mb-10">
+                {t('cta.subtitle')}
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <Link
+                  href="/pricing"
+                  className="inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 text-lg font-semibold text-brand-600 shadow-xl hover:bg-gray-100 hover:shadow-2xl transition-all hover:-translate-y-1"
+                >
+                  {t('cta.button')}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm border border-white/30 px-8 py-4 text-lg font-semibold text-white hover:bg-white/20 transition-all hover:-translate-y-1"
+                >
+                  Contact Sales
+                </Link>
+              </div>
+
+              {/* Trust Badges */}
+              <div className="flex flex-wrap items-center justify-center gap-6 text-brand-200 text-sm">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-green-400" />
+                  <span>No credit card required</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Shield className="h-5 w-5 text-green-400" />
+                  <span>100% local processing</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Users className="h-5 w-5 text-green-400" />
+                  <span>Cancel anytime</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
