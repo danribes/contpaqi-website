@@ -131,63 +131,91 @@ export default function HomePage() {
                 {t('problemSolution.subtitle')}
               </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch relative">
+              {/* Connecting Arrow (visible on md+) */}
+              <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                <div className="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center border-2 border-brand-200">
+                  <ArrowRight className="h-8 w-8 text-brand-600" />
+                </div>
+              </div>
+
               {/* Problems */}
-              <div className="card border-red-100 bg-red-50/50">
-                <h3 className="text-xl font-bold text-red-700 mb-6 flex items-center gap-2">
-                  <AlertTriangle className="h-6 w-6" />
-                  {t('problemSolution.problems.title')}
-                </h3>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <Clock className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
+              <div className="card border-red-200 bg-gradient-to-br from-red-50 to-white shadow-lg hover:shadow-xl transition-shadow">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center">
+                    <AlertTriangle className="h-6 w-6 text-red-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-red-700">
+                    {t('problemSolution.problems.title')}
+                  </h3>
+                </div>
+                <ul className="space-y-5">
+                  <li className="flex items-start gap-4 p-3 rounded-lg hover:bg-red-50/50 transition-colors">
+                    <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center flex-shrink-0">
+                      <Clock className="h-5 w-5 text-red-600" />
+                    </div>
                     <div>
-                      <p className="font-medium text-gray-900">{t('problemSolution.problems.time.title')}</p>
-                      <p className="text-sm text-gray-600">{t('problemSolution.problems.time.description')}</p>
+                      <p className="font-semibold text-gray-900">{t('problemSolution.problems.time.title')}</p>
+                      <p className="text-sm text-gray-600 mt-1">{t('problemSolution.problems.time.description')}</p>
                     </div>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <AlertTriangle className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
+                  <li className="flex items-start gap-4 p-3 rounded-lg hover:bg-red-50/50 transition-colors">
+                    <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center flex-shrink-0">
+                      <AlertTriangle className="h-5 w-5 text-red-600" />
+                    </div>
                     <div>
-                      <p className="font-medium text-gray-900">{t('problemSolution.problems.errors.title')}</p>
-                      <p className="text-sm text-gray-600">{t('problemSolution.problems.errors.description')}</p>
+                      <p className="font-semibold text-gray-900">{t('problemSolution.problems.errors.title')}</p>
+                      <p className="text-sm text-gray-600 mt-1">{t('problemSolution.problems.errors.description')}</p>
                     </div>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <Users className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
+                  <li className="flex items-start gap-4 p-3 rounded-lg hover:bg-red-50/50 transition-colors">
+                    <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center flex-shrink-0">
+                      <Users className="h-5 w-5 text-red-600" />
+                    </div>
                     <div>
-                      <p className="font-medium text-gray-900">{t('problemSolution.problems.scaling.title')}</p>
-                      <p className="text-sm text-gray-600">{t('problemSolution.problems.scaling.description')}</p>
+                      <p className="font-semibold text-gray-900">{t('problemSolution.problems.scaling.title')}</p>
+                      <p className="text-sm text-gray-600 mt-1">{t('problemSolution.problems.scaling.description')}</p>
                     </div>
                   </li>
                 </ul>
               </div>
+
               {/* Solutions */}
-              <div className="card border-green-100 bg-green-50/50">
-                <h3 className="text-xl font-bold text-green-700 mb-6 flex items-center gap-2">
-                  <TrendingUp className="h-6 w-6" />
-                  {t('problemSolution.solutions.title')}
-                </h3>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <Zap className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <div className="card border-green-200 bg-gradient-to-br from-green-50 to-white shadow-lg hover:shadow-xl transition-shadow">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+                    <TrendingUp className="h-6 w-6 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-green-700">
+                    {t('problemSolution.solutions.title')}
+                  </h3>
+                </div>
+                <ul className="space-y-5">
+                  <li className="flex items-start gap-4 p-3 rounded-lg hover:bg-green-50/50 transition-colors">
+                    <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
+                      <Zap className="h-5 w-5 text-green-600" />
+                    </div>
                     <div>
-                      <p className="font-medium text-gray-900">{t('problemSolution.solutions.speed.title')}</p>
-                      <p className="text-sm text-gray-600">{t('problemSolution.solutions.speed.description')}</p>
+                      <p className="font-semibold text-gray-900">{t('problemSolution.solutions.speed.title')}</p>
+                      <p className="text-sm text-gray-600 mt-1">{t('problemSolution.solutions.speed.description')}</p>
                     </div>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <li className="flex items-start gap-4 p-3 rounded-lg hover:bg-green-50/50 transition-colors">
+                    <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle className="h-5 w-5 text-green-600" />
+                    </div>
                     <div>
-                      <p className="font-medium text-gray-900">{t('problemSolution.solutions.accuracy.title')}</p>
-                      <p className="text-sm text-gray-600">{t('problemSolution.solutions.accuracy.description')}</p>
+                      <p className="font-semibold text-gray-900">{t('problemSolution.solutions.accuracy.title')}</p>
+                      <p className="text-sm text-gray-600 mt-1">{t('problemSolution.solutions.accuracy.description')}</p>
                     </div>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <TrendingUp className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <li className="flex items-start gap-4 p-3 rounded-lg hover:bg-green-50/50 transition-colors">
+                    <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
+                      <TrendingUp className="h-5 w-5 text-green-600" />
+                    </div>
                     <div>
-                      <p className="font-medium text-gray-900">{t('problemSolution.solutions.growth.title')}</p>
-                      <p className="text-sm text-gray-600">{t('problemSolution.solutions.growth.description')}</p>
+                      <p className="font-semibold text-gray-900">{t('problemSolution.solutions.growth.title')}</p>
+                      <p className="text-sm text-gray-600 mt-1">{t('problemSolution.solutions.growth.description')}</p>
                     </div>
                   </li>
                 </ul>
