@@ -93,29 +93,29 @@
       "title": "Powerful Features",
       "subtitle": "Everything you need to streamline your accounting workflow",
       "items": {
-        "ai": {
+        "aiOcr": {
           "title": "AI-Powered OCR",
-          "description": "Advanced machine learning models extract data with high accuracy"
+          "description": "Advanced machine learning extracts text from any PDF with 99%+ accuracy"
         },
-        "tables": {
-          "title": "Table Detection",
-          "description": "Automatically detect and extract line items from invoice tables"
+        "rfcValidation": {
+          "title": "RFC Validation",
+          "description": "Automatic verification of Mexican RFC numbers against SAT database"
         },
-        "review": {
-          "title": "Human-in-the-Loop",
-          "description": "Review and correct extractions with confidence highlighting"
+        "ivaCalculation": {
+          "title": "IVA Calculation",
+          "description": "Automatic tax calculations with support for all Mexican IVA rates"
         },
-        "security": {
-          "title": "Local Processing",
-          "description": "All data stays on your machine - nothing sent to the cloud"
+        "confidenceScoring": {
+          "title": "Confidence Scoring",
+          "description": "See exactly how confident the AI is about each extracted field"
         },
-        "cfdi": {
-          "title": "CFDI Compliance",
-          "description": "Validate Mexican electronic invoices with RFC verification"
+        "batchProcessing": {
+          "title": "Batch Processing",
+          "description": "Process hundreds of invoices at once with queue management"
         },
-        "integration": {
-          "title": "Direct Integration",
-          "description": "Post entries directly to ContPAQi through official SDK"
+        "contpaqiIntegration": {
+          "title": "ContPAQi Integration",
+          "description": "Direct posting to ContPAQi Comercial and Contabilidad via official SDK"
         }
       },
       "cta": "View All Features"
