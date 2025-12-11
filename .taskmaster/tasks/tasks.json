@@ -2,7 +2,8 @@
   "meta": {
     "projectName": "ContPAQi AI Bridge Sales Website",
     "version": "1.0.0",
-    "generatedAt": "2025-12-10T23:00:00.000Z"
+    "generatedAt": "2025-12-10T23:00:00.000Z",
+    "updatedAt": "2025-12-11T00:00:00.000Z"
   },
   "tasks": [
     {
@@ -224,6 +225,86 @@
       "priority": "medium",
       "details": "Review all pages for hardcoded text. Add missing translation keys to en.json and es.json. Verify language switcher works. Test RTL is not needed.",
       "testStrategy": "Switch between languages. Verify all text translates correctly."
+    },
+    {
+      "id": 21,
+      "title": "Create SEO Sitemap",
+      "description": "Create sitemap.ts for dynamic sitemap generation to improve SEO and search engine indexing",
+      "status": "pending",
+      "dependencies": [],
+      "priority": "medium",
+      "details": "Create src/app/sitemap.ts using Next.js App Router sitemap convention. Include all public pages (home, features, pricing, download, contact, legal pages). Set appropriate changeFrequency and priority values. Ensure both English and Spanish URLs are included.",
+      "testStrategy": "Verify sitemap is accessible at /sitemap.xml. Validate XML structure. Check all pages are included."
+    },
+    {
+      "id": 22,
+      "title": "Create Robots.txt File",
+      "description": "Create robots.ts for proper search engine crawler instructions",
+      "status": "pending",
+      "dependencies": [],
+      "priority": "medium",
+      "details": "Create src/app/robots.ts using Next.js App Router robots convention. Allow all crawlers for public pages. Disallow /portal, /api, /auth routes. Reference sitemap URL.",
+      "testStrategy": "Verify robots.txt is accessible at /robots.txt. Check correct disallow rules."
+    },
+    {
+      "id": 23,
+      "title": "Add Public Assets (Images, Favicon)",
+      "description": "Create public folder with OG images, favicon, and other static assets referenced in metadata",
+      "status": "pending",
+      "dependencies": [],
+      "priority": "high",
+      "details": "Create /public directory. Add og-image.png (1200x630) for social sharing. Add favicon.ico and apple-touch-icon.png. Add any placeholder images needed for testimonials or features. Update layout.tsx with favicon links if needed.",
+      "testStrategy": "Verify images load correctly. Test social sharing previews with Facebook/Twitter debuggers."
+    },
+    {
+      "id": 24,
+      "title": "Set Up Testing Infrastructure",
+      "description": "Configure testing framework with Jest/Vitest for unit tests and Playwright for E2E tests",
+      "status": "pending",
+      "dependencies": [],
+      "priority": "medium",
+      "details": "Install and configure Vitest + React Testing Library for component tests. Install Playwright for E2E tests. Create test scripts in package.json. Add sample tests for critical flows: checkout, authentication, license validation API.",
+      "testStrategy": "Run test suite. Verify coverage reporting works. Ensure CI-ready configuration."
+    },
+    {
+      "id": 25,
+      "title": "Integrate Analytics",
+      "description": "Implement analytics tracking using Plausible or Google Analytics for visitor insights",
+      "status": "pending",
+      "dependencies": [23],
+      "priority": "low",
+      "details": "Choose analytics provider (Plausible recommended for privacy). Add analytics script to layout.tsx. Configure environment variables. Track key events: page views, CTA clicks, checkout starts, successful purchases. Respect user privacy and GDPR.",
+      "testStrategy": "Verify events are tracked in analytics dashboard. Test in development mode."
+    },
+    {
+      "id": 26,
+      "title": "Set Up Error Monitoring (Sentry)",
+      "description": "Configure Sentry for error tracking and performance monitoring in production",
+      "status": "pending",
+      "dependencies": [],
+      "priority": "medium",
+      "details": "Install @sentry/nextjs. Run Sentry wizard for initial setup. Configure sentry.client.config.ts and sentry.server.config.ts. Add SENTRY_DSN to environment variables. Set up source maps for better stack traces. Configure alerting rules.",
+      "testStrategy": "Trigger test error. Verify it appears in Sentry dashboard with proper context."
+    },
+    {
+      "id": 27,
+      "title": "Implement File Storage for Downloads",
+      "description": "Set up cloud storage (S3, R2, or Vercel Blob) for hosting installer files with secure download links",
+      "status": "pending",
+      "dependencies": [17],
+      "priority": "medium",
+      "details": "Choose storage provider (Vercel Blob for simplicity, or S3/R2 for more control). Implement signed URL generation for downloads. Add download tracking. Update /api/downloads route to serve actual files. Include checksum verification.",
+      "testStrategy": "Upload test file. Verify signed URL works. Test download tracking records correctly."
+    },
+    {
+      "id": 28,
+      "title": "Production Deployment Verification",
+      "description": "Complete deployment checklist and verify all production systems are working correctly",
+      "status": "pending",
+      "dependencies": [21, 22, 23, 26],
+      "priority": "high",
+      "details": "Deploy to Vercel. Configure custom domain and SSL. Set all production environment variables. Test complete purchase flow with Stripe test mode then live mode. Verify email delivery. Test license activation. Run Lighthouse audit for performance. Check SEO with Google Search Console.",
+      "testStrategy": "Complete end-to-end purchase flow. Verify all emails delivered. Test portal access. Check analytics and error tracking."
     }
   ]
 }
