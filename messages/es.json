@@ -129,21 +129,32 @@
           "role": "Contadora Senior",
           "company": "Despacho Contable García",
           "quote": "ContPAQi AI Bridge ha transformado nuestro flujo de trabajo. Lo que antes tomaba horas ahora toma minutos. La precisión es increíble.",
-          "result": "Ahorra 15 horas/semana en captura"
+          "result": "Ahorra 15 horas/semana en captura",
+          "initials": "MG"
         },
         "2": {
           "name": "Carlos Rodríguez",
           "role": "Socio Director",
           "company": "Rodríguez y Asociados",
           "quote": "Hemos podido atender 40% más clientes sin contratar personal adicional. El retorno de inversión fue inmediato.",
-          "result": "40% más capacidad de clientes"
+          "result": "40% más capacidad de clientes",
+          "initials": "CR"
         },
         "3": {
           "name": "Ana Martínez",
           "role": "Directora de Finanzas",
           "company": "Grupo Industrial del Norte",
           "quote": "Las funciones de cumplimiento mexicano son perfectas. La validación de RFC y los cálculos de IVA siempre son precisos.",
-          "result": "Cero errores de captura en 6 meses"
+          "result": "Cero errores de captura en 6 meses",
+          "initials": "AM"
+        },
+        "4": {
+          "name": "Roberto Sánchez",
+          "role": "Director de Contabilidad",
+          "company": "Servicios Fiscales Monterrey",
+          "quote": "La función de procesamiento por lotes es revolucionaria. Procesamos más de 200 facturas diarias con solo dos personas.",
+          "result": "200+ facturas procesadas diariamente",
+          "initials": "RS"
         }
       }
     },

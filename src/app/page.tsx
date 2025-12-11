@@ -381,7 +381,7 @@ export default function HomePage() {
         </section>
 
         {/* Testimonials */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white overflow-hidden">
           <div className="container-custom">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -391,7 +391,9 @@ export default function HomePage() {
                 {t('testimonials.subtitle')}
               </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
+
+            {/* Horizontal scroll on mobile, grid on larger screens */}
+            <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-visible md:pb-0">
               {[
                 {
                   name: t('testimonials.items.1.name'),
@@ -399,6 +401,8 @@ export default function HomePage() {
                   company: t('testimonials.items.1.company'),
                   quote: t('testimonials.items.1.quote'),
                   result: t('testimonials.items.1.result'),
+                  initials: t('testimonials.items.1.initials'),
+                  color: 'brand',
                 },
                 {
                   name: t('testimonials.items.2.name'),
@@ -406,6 +410,8 @@ export default function HomePage() {
                   company: t('testimonials.items.2.company'),
                   quote: t('testimonials.items.2.quote'),
                   result: t('testimonials.items.2.result'),
+                  initials: t('testimonials.items.2.initials'),
+                  color: 'purple',
                 },
                 {
                   name: t('testimonials.items.3.name'),
@@ -413,34 +419,63 @@ export default function HomePage() {
                   company: t('testimonials.items.3.company'),
                   quote: t('testimonials.items.3.quote'),
                   result: t('testimonials.items.3.result'),
+                  initials: t('testimonials.items.3.initials'),
+                  color: 'green',
+                },
+                {
+                  name: t('testimonials.items.4.name'),
+                  role: t('testimonials.items.4.role'),
+                  company: t('testimonials.items.4.company'),
+                  quote: t('testimonials.items.4.quote'),
+                  result: t('testimonials.items.4.result'),
+                  initials: t('testimonials.items.4.initials'),
+                  color: 'orange',
                 },
               ].map((testimonial, index) => (
-                <div key={index} className="card">
+                <div
+                  key={index}
+                  className="flex-shrink-0 w-[300px] md:w-auto snap-center card bg-gradient-to-br from-white to-gray-50 hover:shadow-xl transition-all duration-300 flex flex-col"
+                >
+                  {/* Star Rating */}
                   <div className="flex items-center gap-1 mb-4">
                     {[1, 2, 3, 4, 5].map((star) => (
-                      <Star key={star} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
+                      <Star key={star} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
                     ))}
                   </div>
-                  <blockquote className="text-gray-700 mb-6">
+
+                  {/* Quote */}
+                  <blockquote className="text-gray-700 mb-6 flex-grow text-sm leading-relaxed">
                     &ldquo;{testimonial.quote}&rdquo;
                   </blockquote>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center">
-                      <span className="text-brand-600 font-bold">
-                        {testimonial.name.charAt(0)}
+
+                  {/* Author */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-500 to-brand-600 flex items-center justify-center shadow-md">
+                      <span className="text-white font-bold text-sm">
+                        {testimonial.initials}
                       </span>
                     </div>
-                    <div>
-                      <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                      <p className="text-sm text-gray-500">{testimonial.role}</p>
-                      <p className="text-sm text-gray-500">{testimonial.company}</p>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-semibold text-gray-900 truncate">{testimonial.name}</p>
+                      <p className="text-xs text-gray-500 truncate">{testimonial.role}</p>
+                      <p className="text-xs text-gray-400 truncate">{testimonial.company}</p>
                     </div>
                   </div>
+
+                  {/* Result Badge */}
                   <div className="mt-4 pt-4 border-t border-gray-100">
-                    <p className="text-sm text-green-600 font-medium">{testimonial.result}</p>
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-50 rounded-full">
+                      <CheckCircle className="h-4 w-4 text-green-500" />
+                      <p className="text-xs text-green-700 font-medium">{testimonial.result}</p>
+                    </div>
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Scroll indicator for mobile */}
+            <div className="flex justify-center gap-2 mt-6 md:hidden">
+              <span className="text-xs text-gray-400">← Swipe to see more →</span>
             </div>
           </div>
         </section>
