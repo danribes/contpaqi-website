@@ -82,23 +82,23 @@ export default function DownloadPage() {
 
   const systemRequirements = {
     minimum: [
-      { icon: Monitor, label: t('requirements.os'), value: 'Windows 10 (64-bit)' },
-      { icon: Cpu, label: t('requirements.processor'), value: 'Intel Core i5 (4 cores)' },
-      { icon: HardDrive, label: t('requirements.ram'), value: '8 GB RAM' },
-      { icon: HardDrive, label: t('requirements.storage'), value: '10 GB' },
+      { icon: Monitor, label: t('requirements.os'), value: t('requirements.values.osMin') },
+      { icon: Cpu, label: t('requirements.processor'), value: t('requirements.values.cpuMin') },
+      { icon: HardDrive, label: t('requirements.ram'), value: t('requirements.values.ramMin') },
+      { icon: HardDrive, label: t('requirements.storage'), value: t('requirements.values.storageMin') },
     ],
     recommended: [
-      { icon: Monitor, label: t('requirements.os'), value: 'Windows 11 (64-bit)' },
-      { icon: Cpu, label: t('requirements.processor'), value: 'Intel Core i7 (8 cores)' },
-      { icon: HardDrive, label: t('requirements.ram'), value: '16 GB RAM' },
-      { icon: HardDrive, label: t('requirements.storage'), value: '20 GB SSD' },
+      { icon: Monitor, label: t('requirements.os'), value: t('requirements.values.osRec') },
+      { icon: Cpu, label: t('requirements.processor'), value: t('requirements.values.cpuRec') },
+      { icon: HardDrive, label: t('requirements.ram'), value: t('requirements.values.ramRec') },
+      { icon: HardDrive, label: t('requirements.storage'), value: t('requirements.values.storageRec') },
     ],
   };
 
   const prerequisites = [
-    'Docker Desktop 4.0+',
-    '.NET 6.0 Runtime',
-    'ContPAQi Comercial or ContPAQi Contabilidad',
+    t('requirements.values.prereq1'),
+    t('requirements.values.prereq2'),
+    t('requirements.values.prereq3'),
   ];
 
   const installSteps = [

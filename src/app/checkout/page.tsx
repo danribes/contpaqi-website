@@ -2,36 +2,37 @@
 
 import { useState } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, CheckCircle, Shield, Zap, Loader2 } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 
-// Plan details for display
+// Plan details for display (keys for translations)
 const PLAN_DETAILS = {
   starter: {
-    name: 'Starter',
+    nameKey: 'starter',
     priceMonthly: 49,
     priceYearly: 490,
-    features: [
-      '1 machine activation',
-      '100 invoices/month',
-      'AI data extraction',
-      'Email support',
-      'Software updates',
+    featureKeys: [
+      'machines1',
+      'invoices100',
+      'aiExtraction',
+      'emailSupport',
+      'softwareUpdates',
     ],
   },
   professional: {
-    name: 'Professional',
+    nameKey: 'professional',
     priceMonthly: 99,
     priceYearly: 990,
-    features: [
-      '3 machine activations',
-      'Unlimited invoices',
-      'AI data extraction',
-      'Priority support',
-      'API access',
-      'Batch processing',
+    featureKeys: [
+      'machines3',
+      'unlimitedInvoices',
+      'aiExtraction',
+      'prioritySupport',
+      'apiAccess',
+      'batchProcessing',
     ],
   },
 } as const;
@@ -40,6 +41,8 @@ export default function CheckoutPage() {
   const searchParams = useSearchParams();
   const plan = searchParams.get('plan') as 'starter' | 'professional' | null;
   const interval = (searchParams.get('interval') || 'monthly') as 'monthly' | 'yearly';
+  const t = useTranslations('checkout.page');
+  const tPricing = useTranslations('pricing.plans');
 
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
@@ -52,11 +55,11 @@ export default function CheckoutPage() {
         <Header />
         <main className="flex-1 flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Invalid Plan</h1>
-            <p className="text-gray-600 mb-6">Please select a valid plan from our pricing page.</p>
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">{t('invalidPlan')}</h1>
+            <p className="text-gray-600 mb-6">{t('invalidPlanMessage')}</p>
             <Link href="/pricing" className="btn-primary inline-flex items-center">
               <ArrowLeft className="mr-2 h-4 w-4" />
-              View Pricing
+              {t('viewPricing')}
             </Link>
           </div>
         </main>
@@ -115,44 +118,44 @@ export default function CheckoutPage() {
             className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Pricing
+            {t('backToPricing')}
           </Link>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Order Summary */}
             <div className="bg-white rounded-2xl shadow-lg p-8 h-fit">
-              <h2 className="text-xl font-bold text-gray-900 mb-6">Order Summary</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-6">{t('orderSummary')}</h2>
 
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-lg font-semibold text-gray-900">
-                    {planDetails.name} Plan
+                    {tPricing(`${planDetails.nameKey}.name`)} {t('plan')}
                   </span>
                   <span className="text-sm text-gray-500 capitalize">
-                    {interval} billing
+                    {interval === 'yearly' ? t('year') : t('month')} {t('billing')}
                   </span>
                 </div>
 
                 <div className="flex items-baseline gap-1 mb-4">
                   <span className="text-4xl font-bold text-gray-900">${monthlyEquivalent}</span>
-                  <span className="text-gray-500">/month</span>
+                  <span className="text-gray-500">/{t('month')}</span>
                 </div>
 
                 {interval === 'yearly' && (
                   <div className="text-sm text-gray-600 mb-4">
-                    ${price} billed annually
-                    <span className="ml-2 text-green-600 font-medium">Save 17%</span>
+                    ${price} {t('billedAnnually')}
+                    <span className="ml-2 text-green-600 font-medium">{t('save')} 17%</span>
                   </div>
                 )}
               </div>
 
               <div className="border-t border-gray-200 pt-6">
-                <h3 className="text-sm font-semibold text-gray-700 mb-4">Includes:</h3>
+                <h3 className="text-sm font-semibold text-gray-700 mb-4">{t('includes')}</h3>
                 <ul className="space-y-3">
-                  {planDetails.features.map((feature, index) => (
+                  {planDetails.featureKeys.map((featureKey, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-600 text-sm">{feature}</span>
+                      <span className="text-gray-600 text-sm">{t(`features.${featureKey}`)}</span>
                     </li>
                   ))}
                 </ul>
@@ -160,28 +163,28 @@ export default function CheckoutPage() {
 
               <div className="border-t border-gray-200 mt-6 pt-6">
                 <div className="flex items-center justify-between text-lg font-bold">
-                  <span>Total</span>
+                  <span>{t('total')}</span>
                   <span>
                     ${price}
                     <span className="text-sm font-normal text-gray-500">
-                      /{interval === 'yearly' ? 'year' : 'month'}
+                      /{interval === 'yearly' ? t('year') : t('month')}
                     </span>
                   </span>
                 </div>
                 <p className="text-sm text-gray-500 mt-2">
-                  14-day free trial included
+                  {t('freeTrialIncluded')}
                 </p>
               </div>
             </div>
 
             {/* Checkout Form */}
             <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h2 className="text-xl font-bold text-gray-900 mb-6">Complete Your Order</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-6">{t('completeOrder')}</h2>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address
+                    {t('emailLabel')}
                   </label>
                   <input
                     type="email"
@@ -189,11 +192,11 @@ export default function CheckoutPage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    placeholder="you@company.com"
+                    placeholder={t('emailPlaceholder')}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
                   />
                   <p className="mt-2 text-sm text-gray-500">
-                    Your license key will be sent to this email
+                    {t('emailHint')}
                   </p>
                 </div>
 
@@ -211,18 +214,18 @@ export default function CheckoutPage() {
                   {loading ? (
                     <>
                       <Loader2 className="h-5 w-5 animate-spin" />
-                      Processing...
+                      {t('processing')}
                     </>
                   ) : (
                     <>
-                      Continue to Payment
+                      {t('continuePayment')}
                       <ArrowRight className="h-5 w-5" />
                     </>
                   )}
                 </button>
 
                 <p className="text-center text-sm text-gray-500">
-                  You&apos;ll be redirected to Stripe for secure payment
+                  {t('stripeRedirect')}
                 </p>
               </form>
 
@@ -231,19 +234,19 @@ export default function CheckoutPage() {
                 <div className="grid grid-cols-2 gap-4 text-sm text-gray-600">
                   <div className="flex items-center gap-2">
                     <Shield className="h-5 w-5 text-green-500" />
-                    <span>Secure checkout</span>
+                    <span>{t('secureCheckout')}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Zap className="h-5 w-5 text-yellow-500" />
-                    <span>Instant activation</span>
+                    <span>{t('instantActivation')}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-blue-500" />
-                    <span>14-day free trial</span>
+                    <span>{t('freeTrial')}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Shield className="h-5 w-5 text-purple-500" />
-                    <span>30-day guarantee</span>
+                    <span>{t('guarantee')}</span>
                   </div>
                 </div>
               </div>

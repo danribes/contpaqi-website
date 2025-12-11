@@ -635,7 +635,20 @@
       "processor": "Processor",
       "ram": "Memory",
       "storage": "Storage",
-      "prerequisites": "Prerequisites"
+      "prerequisites": "Prerequisites",
+      "values": {
+        "osMin": "Windows 10 (64-bit)",
+        "osRec": "Windows 11 (64-bit)",
+        "cpuMin": "Intel Core i5 (4 cores)",
+        "cpuRec": "Intel Core i7 (8 cores)",
+        "ramMin": "8 GB RAM",
+        "ramRec": "16 GB RAM",
+        "storageMin": "10 GB",
+        "storageRec": "20 GB SSD",
+        "prereq1": "Docker Desktop 4.0+",
+        "prereq2": ".NET 6.0 Runtime",
+        "prereq3": "ContPAQi Comercial or ContPAQi Contabilidad"
+      }
     },
     "install": {
       "title": "Installation Guide",
@@ -655,6 +668,45 @@
     }
   },
   "checkout": {
+    "page": {
+      "invalidPlan": "Invalid Plan",
+      "invalidPlanMessage": "Please select a valid plan from our pricing page.",
+      "viewPricing": "View Pricing",
+      "backToPricing": "Back to Pricing",
+      "orderSummary": "Order Summary",
+      "plan": "Plan",
+      "billing": "billing",
+      "month": "month",
+      "year": "year",
+      "billedAnnually": "billed annually",
+      "save": "Save",
+      "includes": "Includes:",
+      "total": "Total",
+      "freeTrialIncluded": "14-day free trial included",
+      "completeOrder": "Complete Your Order",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "you@company.com",
+      "emailHint": "Your license key will be sent to this email",
+      "processing": "Processing...",
+      "continuePayment": "Continue to Payment",
+      "stripeRedirect": "You'll be redirected to Stripe for secure payment",
+      "secureCheckout": "Secure checkout",
+      "instantActivation": "Instant activation",
+      "freeTrial": "14-day free trial",
+      "guarantee": "30-day guarantee",
+      "features": {
+        "machines1": "1 machine activation",
+        "machines3": "3 machine activations",
+        "invoices100": "100 invoices/month",
+        "unlimitedInvoices": "Unlimited invoices",
+        "aiExtraction": "AI data extraction",
+        "emailSupport": "Email support",
+        "prioritySupport": "Priority support",
+        "softwareUpdates": "Software updates",
+        "apiAccess": "API access",
+        "batchProcessing": "Batch processing"
+      }
+    },
     "success": {
       "title": "Payment Successful!",
       "subtitle": "Thank you for your purchase. Your license is now active.",
@@ -693,15 +745,251 @@
   "legal": {
     "terms": {
       "title": "Terms of Service",
-      "lastUpdated": "Last updated"
+      "lastUpdated": "Last updated",
+      "sections": {
+        "acceptance": {
+          "title": "1. Acceptance of Terms",
+          "content": "By accessing or using ContPAQi AI Bridge (\"the Software\"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the Software."
+        },
+        "license": {
+          "title": "2. License Grant",
+          "content": "Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable license to use the Software on the number of machines specified by your subscription plan.",
+          "plans": {
+            "starter": "Starter Plan: 1 machine activation",
+            "professional": "Professional Plan: 3 machine activations",
+            "enterprise": "Enterprise Plan: As specified in your agreement"
+          }
+        },
+        "restrictions": {
+          "title": "3. Restrictions",
+          "intro": "You may not:",
+          "items": {
+            "reverse": "Reverse engineer, decompile, or disassemble the Software",
+            "remove": "Remove or alter any proprietary notices or labels",
+            "share": "Share, transfer, or sublicense your license to others",
+            "unlawful": "Use the Software for any unlawful purpose",
+            "bypass": "Attempt to bypass the licensing or activation system"
+          }
+        },
+        "dataProcessing": {
+          "title": "4. Data Processing",
+          "content": "The Software processes invoice data locally on your machine. No invoice data is transmitted to our servers. The Software only communicates with our servers for:",
+          "items": {
+            "activation": "License activation and validation",
+            "updates": "Software updates",
+            "analytics": "Anonymous usage analytics (if enabled)"
+          }
+        },
+        "subscription": {
+          "title": "5. Subscription and Payment",
+          "content": "Subscriptions are billed monthly or annually as selected. You authorize us to charge your payment method for recurring fees. You may cancel your subscription at any time, effective at the end of the current billing period."
+        },
+        "refund": {
+          "title": "6. Refund Policy",
+          "content": "We offer a 30-day money-back guarantee for new subscriptions. If you are not satisfied with the Software within 30 days of your initial purchase, contact support for a full refund."
+        },
+        "warranty": {
+          "title": "7. Disclaimer of Warranties",
+          "content": "THE SOFTWARE IS PROVIDED \"AS IS\" WITHOUT WARRANTY OF ANY KIND. WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT."
+        },
+        "liability": {
+          "title": "8. Limitation of Liability",
+          "content": "IN NO EVENT SHALL WE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF YOUR USE OF THE SOFTWARE."
+        },
+        "changes": {
+          "title": "9. Changes to Terms",
+          "content": "We may update these Terms from time to time. We will notify you of any material changes by email or through the Software. Your continued use of the Software after such changes constitutes acceptance of the new Terms."
+        },
+        "contact": {
+          "title": "10. Contact",
+          "content": "For questions about these Terms, please contact us at legal@contpaqi-ai-bridge.com."
+        }
+      }
     },
     "privacy": {
       "title": "Privacy Policy",
-      "lastUpdated": "Last updated"
+      "lastUpdated": "Last updated",
+      "sections": {
+        "intro": {
+          "title": "1. Introduction",
+          "content": "This Privacy Policy explains how ContPAQi AI Bridge collects, uses, and protects your information. We are committed to protecting your privacy and ensuring the security of your data."
+        },
+        "collect": {
+          "title": "2. Information We Collect",
+          "account": {
+            "title": "Account Information",
+            "intro": "When you create an account, we collect:",
+            "items": {
+              "name": "Name and email address",
+              "company": "Company name (optional)",
+              "payment": "Payment information (processed securely via Stripe)"
+            }
+          },
+          "license": {
+            "title": "License Information",
+            "intro": "For license management, we collect:",
+            "items": {
+              "fingerprint": "Hardware fingerprint (for machine activation)",
+              "machine": "Machine name (optional)",
+              "timestamps": "Activation timestamps"
+            }
+          },
+          "analytics": {
+            "title": "Usage Analytics (Optional)",
+            "intro": "If you opt-in, we collect anonymous usage data such as:",
+            "items": {
+              "features": "Feature usage statistics",
+              "errors": "Error reports",
+              "performance": "Performance metrics"
+            }
+          }
+        },
+        "notCollect": {
+          "title": "3. Information We Do NOT Collect",
+          "intro": "We do NOT collect, store, or transmit:",
+          "items": {
+            "invoice": "Your invoice data or documents",
+            "database": "ContPAQi database contents",
+            "customer": "Customer or vendor information from invoices",
+            "financial": "Financial transaction details from invoices"
+          },
+          "note": "All invoice processing happens 100% locally on your machine. Your business data never leaves your computer."
+        },
+        "use": {
+          "title": "4. How We Use Your Information",
+          "intro": "We use your information to:",
+          "items": {
+            "provide": "Provide and maintain the Software",
+            "process": "Process payments and manage subscriptions",
+            "send": "Send important service notifications",
+            "support": "Provide customer support",
+            "improve": "Improve the Software based on usage analytics"
+          }
+        },
+        "security": {
+          "title": "5. Data Security",
+          "intro": "We implement industry-standard security measures including:",
+          "items": {
+            "encryption": "Encryption of data in transit (TLS/SSL)",
+            "stripe": "Secure payment processing via Stripe",
+            "audits": "Regular security audits",
+            "access": "Access controls and monitoring"
+          }
+        },
+        "retention": {
+          "title": "6. Data Retention",
+          "content": "We retain your account information for as long as your account is active. If you close your account, we will delete your personal information within 90 days, except where retention is required by law."
+        },
+        "rights": {
+          "title": "7. Your Rights",
+          "intro": "You have the right to:",
+          "items": {
+            "access": "Access your personal information",
+            "correct": "Correct inaccurate information",
+            "delete": "Request deletion of your account",
+            "export": "Export your data",
+            "optout": "Opt-out of marketing communications"
+          }
+        },
+        "cookies": {
+          "title": "8. Cookies and Tracking",
+          "content": "Our website uses essential cookies for functionality and optional analytics cookies (with your consent). You can manage cookie preferences through your browser settings."
+        },
+        "thirdParty": {
+          "title": "9. Third-Party Services",
+          "intro": "We use the following third-party services:",
+          "items": {
+            "stripe": "Stripe for payment processing",
+            "resend": "Resend for email delivery",
+            "vercel": "Vercel for website hosting"
+          },
+          "note": "These services have their own privacy policies governing their use of your information."
+        },
+        "contact": {
+          "title": "10. Contact Us",
+          "content": "For privacy-related inquiries, please contact us at privacy@contpaqi-ai-bridge.com."
+        }
+      }
     },
     "refunds": {
       "title": "Refund Policy",
-      "lastUpdated": "Last updated"
+      "lastUpdated": "Last updated",
+      "sections": {
+        "guarantee": {
+          "title": "30-Day Money-Back Guarantee",
+          "content": "We offer a full 30-day money-back guarantee on all new subscriptions. If you're not completely satisfied with ContPAQi AI Bridge within 30 days of your initial purchase, we'll refund your payment in full—no questions asked."
+        },
+        "eligibility": {
+          "title": "1. Eligibility for Refunds",
+          "intro": "You are eligible for a full refund if:",
+          "items": {
+            "within30": "Your request is made within 30 days of your initial purchase",
+            "firstPurchase": "This is your first purchase of ContPAQi AI Bridge",
+            "noPrevious": "You have not previously received a refund for the same product"
+          }
+        },
+        "howTo": {
+          "title": "2. How to Request a Refund",
+          "intro": "To request a refund:",
+          "steps": {
+            "email": "Send an email to support@contpaqi-ai-bridge.com",
+            "orderNumber": "Include your order number or the email address used for purchase",
+            "reason": "Briefly describe the reason for your refund request (optional but helpful)"
+          },
+          "processing": "We typically process refund requests within 2-3 business days. Once approved, the refund will be credited to your original payment method within 5-10 business days."
+        },
+        "renewals": {
+          "title": "3. Subscription Renewals",
+          "intro": "For subscription renewals (after the initial 30-day period):",
+          "items": {
+            "cancel": "You may cancel your subscription at any time before the next billing cycle",
+            "effective": "Cancellations take effect at the end of your current billing period",
+            "prorated": "We do not offer prorated refunds for partial months or years",
+            "access": "You retain access to the software until your subscription period ends"
+          }
+        },
+        "annual": {
+          "title": "4. Annual Subscriptions",
+          "intro": "For annual subscription plans:",
+          "items": {
+            "guarantee": "The 30-day money-back guarantee applies to the full annual payment",
+            "after30": "After 30 days, you may cancel to prevent auto-renewal, but the current year is non-refundable",
+            "technical": "If you experience significant technical issues beyond 30 days, please contact support for case-by-case consideration"
+          }
+        },
+        "nonRefundable": {
+          "title": "5. Non-Refundable Items",
+          "intro": "The following are not eligible for refunds:",
+          "items": {
+            "renewals": "Subscription renewals after the initial 30-day period",
+            "upgrades": "Upgrades or add-ons purchased separately (after 30 days)",
+            "resellers": "Purchases made through resellers or third parties",
+            "violations": "Accounts terminated for Terms of Service violations"
+          }
+        },
+        "technical": {
+          "title": "6. Technical Issues",
+          "content": "If you're experiencing technical issues with the software, we encourage you to contact our support team first. Many issues can be resolved quickly, and we're committed to ensuring you get value from ContPAQi AI Bridge. If we cannot resolve your issue, we will work with you on an appropriate remedy, which may include a refund."
+        },
+        "planChanges": {
+          "title": "7. Plan Changes",
+          "content": "If you upgrade your plan, you'll pay the prorated difference. If you downgrade, the change takes effect at your next billing cycle—there are no refunds for downgrades, but you retain your higher-tier features until the cycle ends."
+        },
+        "enterprise": {
+          "title": "8. Enterprise Customers",
+          "content": "Enterprise customers with custom agreements should refer to their specific contract terms. For questions about enterprise refunds, please contact your account representative or email enterprise@contpaqi-ai-bridge.com."
+        },
+        "changes": {
+          "title": "9. Changes to This Policy",
+          "content": "We may update this Refund Policy from time to time. Changes will be posted on this page with an updated effective date. Your continued use of the service after changes constitutes acceptance of the new policy."
+        },
+        "contact": {
+          "title": "10. Contact Us",
+          "intro": "If you have questions about this Refund Policy or need assistance with a refund, please contact us:",
+          "email": "Email: support@contpaqi-ai-bridge.com",
+          "portal": "Support Portal: Contact Form"
+        }
+      }
     }
   }
 }

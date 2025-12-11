@@ -635,7 +635,20 @@
       "processor": "Procesador",
       "ram": "Memoria",
       "storage": "Almacenamiento",
-      "prerequisites": "Prerequisitos"
+      "prerequisites": "Prerequisitos",
+      "values": {
+        "osMin": "Windows 10 (64-bit)",
+        "osRec": "Windows 11 (64-bit)",
+        "cpuMin": "Intel Core i5 (4 núcleos)",
+        "cpuRec": "Intel Core i7 (8 núcleos)",
+        "ramMin": "8 GB RAM",
+        "ramRec": "16 GB RAM",
+        "storageMin": "10 GB",
+        "storageRec": "20 GB SSD",
+        "prereq1": "Docker Desktop 4.0+",
+        "prereq2": ".NET 6.0 Runtime",
+        "prereq3": "ContPAQi Comercial o ContPAQi Contabilidad"
+      }
     },
     "install": {
       "title": "Guía de Instalación",
@@ -655,6 +668,45 @@
     }
   },
   "checkout": {
+    "page": {
+      "invalidPlan": "Plan Inválido",
+      "invalidPlanMessage": "Por favor selecciona un plan válido de nuestra página de precios.",
+      "viewPricing": "Ver Precios",
+      "backToPricing": "Volver a Precios",
+      "orderSummary": "Resumen del Pedido",
+      "plan": "Plan",
+      "billing": "facturación",
+      "month": "mes",
+      "year": "año",
+      "billedAnnually": "facturado anualmente",
+      "save": "Ahorra",
+      "includes": "Incluye:",
+      "total": "Total",
+      "freeTrialIncluded": "Prueba gratis de 14 días incluida",
+      "completeOrder": "Completa Tu Pedido",
+      "emailLabel": "Correo Electrónico",
+      "emailPlaceholder": "tu@empresa.com",
+      "emailHint": "Tu clave de licencia será enviada a este correo",
+      "processing": "Procesando...",
+      "continuePayment": "Continuar al Pago",
+      "stripeRedirect": "Serás redirigido a Stripe para el pago seguro",
+      "secureCheckout": "Pago seguro",
+      "instantActivation": "Activación instantánea",
+      "freeTrial": "Prueba gratis de 14 días",
+      "guarantee": "Garantía de 30 días",
+      "features": {
+        "machines1": "1 activación de máquina",
+        "machines3": "3 activaciones de máquina",
+        "invoices100": "100 facturas/mes",
+        "unlimitedInvoices": "Facturas ilimitadas",
+        "aiExtraction": "Extracción de datos con IA",
+        "emailSupport": "Soporte por correo",
+        "prioritySupport": "Soporte prioritario",
+        "softwareUpdates": "Actualizaciones de software",
+        "apiAccess": "Acceso a API",
+        "batchProcessing": "Procesamiento por lotes"
+      }
+    },
     "success": {
       "title": "¡Pago Exitoso!",
       "subtitle": "Gracias por tu compra. Tu licencia ya está activa.",
@@ -693,15 +745,251 @@
   "legal": {
     "terms": {
       "title": "Términos de Servicio",
-      "lastUpdated": "Última actualización"
+      "lastUpdated": "Última actualización",
+      "sections": {
+        "acceptance": {
+          "title": "1. Aceptación de los Términos",
+          "content": "Al acceder o utilizar ContPAQi AI Bridge (\"el Software\"), aceptas estar sujeto a estos Términos de Servicio. Si no estás de acuerdo con estos términos, por favor no uses el Software."
+        },
+        "license": {
+          "title": "2. Concesión de Licencia",
+          "content": "Sujeto a tu cumplimiento con estos Términos, te otorgamos una licencia limitada, no exclusiva e intransferible para usar el Software en el número de máquinas especificado por tu plan de suscripción.",
+          "plans": {
+            "starter": "Plan Inicial: 1 activación de máquina",
+            "professional": "Plan Profesional: 3 activaciones de máquina",
+            "enterprise": "Plan Empresarial: Según lo especificado en tu acuerdo"
+          }
+        },
+        "restrictions": {
+          "title": "3. Restricciones",
+          "intro": "No puedes:",
+          "items": {
+            "reverse": "Realizar ingeniería inversa, descompilar o desensamblar el Software",
+            "remove": "Eliminar o alterar avisos o etiquetas de propiedad",
+            "share": "Compartir, transferir o sublicenciar tu licencia a otros",
+            "unlawful": "Usar el Software para cualquier propósito ilegal",
+            "bypass": "Intentar eludir el sistema de licenciamiento o activación"
+          }
+        },
+        "dataProcessing": {
+          "title": "4. Procesamiento de Datos",
+          "content": "El Software procesa datos de facturas localmente en tu máquina. Ningún dato de factura se transmite a nuestros servidores. El Software solo se comunica con nuestros servidores para:",
+          "items": {
+            "activation": "Activación y validación de licencias",
+            "updates": "Actualizaciones de software",
+            "analytics": "Analíticas de uso anónimas (si están habilitadas)"
+          }
+        },
+        "subscription": {
+          "title": "5. Suscripción y Pago",
+          "content": "Las suscripciones se facturan mensual o anualmente según se seleccione. Nos autorizas a cobrar a tu método de pago las tarifas recurrentes. Puedes cancelar tu suscripción en cualquier momento, efectiva al final del período de facturación actual."
+        },
+        "refund": {
+          "title": "6. Política de Reembolso",
+          "content": "Ofrecemos una garantía de devolución de dinero de 30 días para nuevas suscripciones. Si no estás satisfecho con el Software dentro de los 30 días de tu compra inicial, contacta a soporte para un reembolso completo."
+        },
+        "warranty": {
+          "title": "7. Renuncia de Garantías",
+          "content": "EL SOFTWARE SE PROPORCIONA \"TAL CUAL\" SIN GARANTÍA DE NINGÚN TIPO. RENUNCIAMOS A TODAS LAS GARANTÍAS, EXPRESAS O IMPLÍCITAS, INCLUYENDO GARANTÍAS DE COMERCIABILIDAD, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN."
+        },
+        "liability": {
+          "title": "8. Limitación de Responsabilidad",
+          "content": "EN NINGÚN CASO SEREMOS RESPONSABLES POR DAÑOS INDIRECTOS, INCIDENTALES, ESPECIALES, CONSECUENTES O PUNITIVOS QUE SURJAN DE TU USO DEL SOFTWARE."
+        },
+        "changes": {
+          "title": "9. Cambios a los Términos",
+          "content": "Podemos actualizar estos Términos de vez en cuando. Te notificaremos de cualquier cambio material por correo electrónico o a través del Software. Tu uso continuado del Software después de dichos cambios constituye aceptación de los nuevos Términos."
+        },
+        "contact": {
+          "title": "10. Contacto",
+          "content": "Para preguntas sobre estos Términos, por favor contáctanos en legal@contpaqi-ai-bridge.com."
+        }
+      }
     },
     "privacy": {
       "title": "Política de Privacidad",
-      "lastUpdated": "Última actualización"
+      "lastUpdated": "Última actualización",
+      "sections": {
+        "intro": {
+          "title": "1. Introducción",
+          "content": "Esta Política de Privacidad explica cómo ContPAQi AI Bridge recopila, usa y protege tu información. Estamos comprometidos a proteger tu privacidad y garantizar la seguridad de tus datos."
+        },
+        "collect": {
+          "title": "2. Información que Recopilamos",
+          "account": {
+            "title": "Información de Cuenta",
+            "intro": "Cuando creas una cuenta, recopilamos:",
+            "items": {
+              "name": "Nombre y dirección de correo electrónico",
+              "company": "Nombre de la empresa (opcional)",
+              "payment": "Información de pago (procesada de forma segura a través de Stripe)"
+            }
+          },
+          "license": {
+            "title": "Información de Licencia",
+            "intro": "Para la gestión de licencias, recopilamos:",
+            "items": {
+              "fingerprint": "Huella digital del hardware (para activación de máquina)",
+              "machine": "Nombre de la máquina (opcional)",
+              "timestamps": "Marcas de tiempo de activación"
+            }
+          },
+          "analytics": {
+            "title": "Analíticas de Uso (Opcional)",
+            "intro": "Si optas por participar, recopilamos datos de uso anónimos como:",
+            "items": {
+              "features": "Estadísticas de uso de funciones",
+              "errors": "Reportes de errores",
+              "performance": "Métricas de rendimiento"
+            }
+          }
+        },
+        "notCollect": {
+          "title": "3. Información que NO Recopilamos",
+          "intro": "NO recopilamos, almacenamos ni transmitimos:",
+          "items": {
+            "invoice": "Tus datos o documentos de facturas",
+            "database": "Contenidos de la base de datos de ContPAQi",
+            "customer": "Información de clientes o proveedores de facturas",
+            "financial": "Detalles de transacciones financieras de facturas"
+          },
+          "note": "Todo el procesamiento de facturas ocurre 100% localmente en tu máquina. Tus datos comerciales nunca salen de tu computadora."
+        },
+        "use": {
+          "title": "4. Cómo Usamos Tu Información",
+          "intro": "Usamos tu información para:",
+          "items": {
+            "provide": "Proporcionar y mantener el Software",
+            "process": "Procesar pagos y gestionar suscripciones",
+            "send": "Enviar notificaciones importantes del servicio",
+            "support": "Proporcionar soporte al cliente",
+            "improve": "Mejorar el Software basado en analíticas de uso"
+          }
+        },
+        "security": {
+          "title": "5. Seguridad de Datos",
+          "intro": "Implementamos medidas de seguridad estándar de la industria incluyendo:",
+          "items": {
+            "encryption": "Cifrado de datos en tránsito (TLS/SSL)",
+            "stripe": "Procesamiento seguro de pagos a través de Stripe",
+            "audits": "Auditorías de seguridad regulares",
+            "access": "Controles de acceso y monitoreo"
+          }
+        },
+        "retention": {
+          "title": "6. Retención de Datos",
+          "content": "Retenemos la información de tu cuenta mientras tu cuenta esté activa. Si cierras tu cuenta, eliminaremos tu información personal dentro de 90 días, excepto donde la retención sea requerida por ley."
+        },
+        "rights": {
+          "title": "7. Tus Derechos",
+          "intro": "Tienes derecho a:",
+          "items": {
+            "access": "Acceder a tu información personal",
+            "correct": "Corregir información inexacta",
+            "delete": "Solicitar la eliminación de tu cuenta",
+            "export": "Exportar tus datos",
+            "optout": "Optar por no recibir comunicaciones de marketing"
+          }
+        },
+        "cookies": {
+          "title": "8. Cookies y Seguimiento",
+          "content": "Nuestro sitio web utiliza cookies esenciales para funcionalidad y cookies de analíticas opcionales (con tu consentimiento). Puedes gestionar las preferencias de cookies a través de la configuración de tu navegador."
+        },
+        "thirdParty": {
+          "title": "9. Servicios de Terceros",
+          "intro": "Utilizamos los siguientes servicios de terceros:",
+          "items": {
+            "stripe": "Stripe para procesamiento de pagos",
+            "resend": "Resend para envío de correos electrónicos",
+            "vercel": "Vercel para hospedaje del sitio web"
+          },
+          "note": "Estos servicios tienen sus propias políticas de privacidad que rigen el uso de tu información."
+        },
+        "contact": {
+          "title": "10. Contáctanos",
+          "content": "Para consultas relacionadas con privacidad, por favor contáctanos en privacy@contpaqi-ai-bridge.com."
+        }
+      }
     },
     "refunds": {
       "title": "Política de Reembolso",
-      "lastUpdated": "Última actualización"
+      "lastUpdated": "Última actualización",
+      "sections": {
+        "guarantee": {
+          "title": "Garantía de Devolución de Dinero de 30 Días",
+          "content": "Ofrecemos una garantía completa de devolución de dinero de 30 días en todas las nuevas suscripciones. Si no estás completamente satisfecho con ContPAQi AI Bridge dentro de los 30 días de tu compra inicial, te reembolsaremos el pago completo, sin preguntas."
+        },
+        "eligibility": {
+          "title": "1. Elegibilidad para Reembolsos",
+          "intro": "Eres elegible para un reembolso completo si:",
+          "items": {
+            "within30": "Tu solicitud se realiza dentro de los 30 días de tu compra inicial",
+            "firstPurchase": "Esta es tu primera compra de ContPAQi AI Bridge",
+            "noPrevious": "No has recibido previamente un reembolso por el mismo producto"
+          }
+        },
+        "howTo": {
+          "title": "2. Cómo Solicitar un Reembolso",
+          "intro": "Para solicitar un reembolso:",
+          "steps": {
+            "email": "Envía un correo electrónico a support@contpaqi-ai-bridge.com",
+            "orderNumber": "Incluye tu número de pedido o la dirección de correo electrónico utilizada para la compra",
+            "reason": "Describe brevemente el motivo de tu solicitud de reembolso (opcional pero útil)"
+          },
+          "processing": "Normalmente procesamos las solicitudes de reembolso dentro de 2-3 días hábiles. Una vez aprobado, el reembolso se acreditará a tu método de pago original dentro de 5-10 días hábiles."
+        },
+        "renewals": {
+          "title": "3. Renovaciones de Suscripción",
+          "intro": "Para renovaciones de suscripción (después del período inicial de 30 días):",
+          "items": {
+            "cancel": "Puedes cancelar tu suscripción en cualquier momento antes del próximo ciclo de facturación",
+            "effective": "Las cancelaciones entran en vigencia al final de tu período de facturación actual",
+            "prorated": "No ofrecemos reembolsos prorrateados por meses o años parciales",
+            "access": "Conservas el acceso al software hasta que termine tu período de suscripción"
+          }
+        },
+        "annual": {
+          "title": "4. Suscripciones Anuales",
+          "intro": "Para planes de suscripción anual:",
+          "items": {
+            "guarantee": "La garantía de devolución de dinero de 30 días aplica al pago anual completo",
+            "after30": "Después de 30 días, puedes cancelar para evitar la renovación automática, pero el año actual no es reembolsable",
+            "technical": "Si experimentas problemas técnicos significativos después de 30 días, contacta a soporte para consideración caso por caso"
+          }
+        },
+        "nonRefundable": {
+          "title": "5. Artículos No Reembolsables",
+          "intro": "Los siguientes no son elegibles para reembolsos:",
+          "items": {
+            "renewals": "Renovaciones de suscripción después del período inicial de 30 días",
+            "upgrades": "Actualizaciones o complementos comprados por separado (después de 30 días)",
+            "resellers": "Compras realizadas a través de revendedores o terceros",
+            "violations": "Cuentas terminadas por violaciones de los Términos de Servicio"
+          }
+        },
+        "technical": {
+          "title": "6. Problemas Técnicos",
+          "content": "Si estás experimentando problemas técnicos con el software, te animamos a contactar primero a nuestro equipo de soporte. Muchos problemas pueden resolverse rápidamente, y estamos comprometidos a asegurar que obtengas valor de ContPAQi AI Bridge. Si no podemos resolver tu problema, trabajaremos contigo en un remedio apropiado, que puede incluir un reembolso."
+        },
+        "planChanges": {
+          "title": "7. Cambios de Plan",
+          "content": "Si actualizas tu plan, pagarás la diferencia prorrateada. Si reduces tu plan, el cambio entra en vigencia en tu próximo ciclo de facturación—no hay reembolsos por reducciones, pero conservas las funciones del nivel superior hasta que termine el ciclo."
+        },
+        "enterprise": {
+          "title": "8. Clientes Empresariales",
+          "content": "Los clientes empresariales con acuerdos personalizados deben referirse a los términos específicos de su contrato. Para preguntas sobre reembolsos empresariales, contacta a tu representante de cuenta o envía un correo a enterprise@contpaqi-ai-bridge.com."
+        },
+        "changes": {
+          "title": "9. Cambios a Esta Política",
+          "content": "Podemos actualizar esta Política de Reembolso de vez en cuando. Los cambios se publicarán en esta página con una fecha de vigencia actualizada. Tu uso continuado del servicio después de los cambios constituye aceptación de la nueva política."
+        },
+        "contact": {
+          "title": "10. Contáctanos",
+          "intro": "Si tienes preguntas sobre esta Política de Reembolso o necesitas asistencia con un reembolso, contáctanos:",
+          "email": "Correo: support@contpaqi-ai-bridge.com",
+          "portal": "Portal de Soporte: Formulario de Contacto"
+        }
+      }
     }
   }
 }
