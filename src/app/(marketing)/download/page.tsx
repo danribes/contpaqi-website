@@ -1,5 +1,7 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import { Metadata } from 'next';
 import Link from 'next/link';
 import {
   Download,
@@ -9,18 +11,74 @@ import {
   CheckCircle,
   FileText,
   Settings,
-  AlertCircle
+  AlertCircle,
+  Copy,
+  Check,
+  Calendar,
+  Shield,
+  Loader2,
 } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 
-export const metadata: Metadata = {
-  title: 'Download',
-  description: 'Download ContPAQi AI Bridge for Windows. System requirements and installation guide.',
-};
+interface DownloadInfo {
+  version: string;
+  releaseDate: string;
+  filename: string;
+  size: number;
+  checksum: string | null;
+  changelog: string | null;
+  downloadUrl: string;
+}
 
 export default function DownloadPage() {
   const t = useTranslations('download');
+  const [downloadInfo, setDownloadInfo] = useState<DownloadInfo | null>(null);
+  const [copiedChecksum, setCopiedChecksum] = useState(false);
+
+  useEffect(() => {
+    async function fetchDownloadInfo() {
+      try {
+        const response = await fetch('/api/downloads');
+        const data = await response.json();
+        setDownloadInfo(data);
+      } catch (error) {
+        console.error('Failed to fetch download info:', error);
+        // Use defaults
+        setDownloadInfo({
+          version: '1.0.0',
+          releaseDate: new Date().toISOString(),
+          filename: 'ContPAQi-AI-Bridge-Setup.exe',
+          size: 157286400,
+          checksum: null,
+          changelog: null,
+          downloadUrl: '/downloads/ContPAQi-AI-Bridge-Setup.exe',
+        });
+      }
+    }
+    fetchDownloadInfo();
+  }, []);
+
+  const copyChecksum = () => {
+    if (downloadInfo?.checksum) {
+      navigator.clipboard.writeText(downloadInfo.checksum);
+      setCopiedChecksum(true);
+      setTimeout(() => setCopiedChecksum(false), 2000);
+    }
+  };
+
+  const formatFileSize = (bytes: number) => {
+    const mb = bytes / (1024 * 1024);
+    return `~${Math.round(mb)} MB`;
+  };
+
+  const formatDate = (dateStr: string) => {
+    return new Date(dateStr).toLocaleDateString(undefined, {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    });
+  };
 
   const systemRequirements = {
     minimum: [
@@ -74,9 +132,25 @@ export default function DownloadPage() {
                 {t('hero.downloadButton')}
               </a>
             </div>
-            <p className="mt-4 text-sm text-gray-500">
-              {t('hero.version')} 1.0.0 | Windows 10/11 (64-bit)
-            </p>
+            {downloadInfo ? (
+              <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-gray-500">
+                <span className="flex items-center gap-1">
+                  <Shield className="h-4 w-4" />
+                  {t('hero.version')} {downloadInfo.version}
+                </span>
+                <span className="hidden sm:inline">|</span>
+                <span className="flex items-center gap-1">
+                  <Calendar className="h-4 w-4" />
+                  {formatDate(downloadInfo.releaseDate)}
+                </span>
+                <span className="hidden sm:inline">|</span>
+                <span>Windows 10/11 (64-bit)</span>
+              </div>
+            ) : (
+              <div className="mt-4 flex items-center justify-center">
+                <Loader2 className="h-4 w-4 animate-spin text-gray-400" />
+              </div>
+            )}
           </div>
         </section>
 
@@ -94,13 +168,15 @@ export default function DownloadPage() {
                   {t('downloads.standard.description')}
                 </p>
                 <a
-                  href="/downloads/ContPAQi-AI-Bridge-Setup.exe"
+                  href={downloadInfo?.downloadUrl || '/downloads/ContPAQi-AI-Bridge-Setup.exe'}
                   className="btn-primary w-full"
                 >
                   <Download className="mr-2 h-4 w-4" />
                   {t('downloads.standard.button')}
                 </a>
-                <p className="text-sm text-gray-500 mt-2">~150 MB</p>
+                <p className="text-sm text-gray-500 mt-2">
+                  {downloadInfo ? formatFileSize(downloadInfo.size) : '~150 MB'}
+                </p>
               </div>
 
               {/* Silent Installer */}
@@ -119,9 +195,39 @@ export default function DownloadPage() {
                   <Download className="mr-2 h-4 w-4" />
                   {t('downloads.silent.button')}
                 </a>
-                <p className="text-sm text-gray-500 mt-2">~150 MB</p>
+                <p className="text-sm text-gray-500 mt-2">
+                  {downloadInfo ? formatFileSize(downloadInfo.size) : '~150 MB'}
+                </p>
               </div>
             </div>
+
+            {/* Checksum */}
+            {downloadInfo?.checksum && (
+              <div className="max-w-4xl mx-auto mt-8">
+                <div className="card bg-gray-50">
+                  <h4 className="text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
+                    <Shield className="h-4 w-4" />
+                    {t('downloads.checksum')}
+                  </h4>
+                  <div className="flex items-center gap-2">
+                    <code className="flex-1 bg-white px-4 py-2 rounded-lg font-mono text-xs text-gray-600 overflow-x-auto border border-gray-200">
+                      SHA256: {downloadInfo.checksum}
+                    </code>
+                    <button
+                      onClick={copyChecksum}
+                      className="p-2 hover:bg-gray-200 rounded-lg transition-colors flex-shrink-0"
+                      title={t('downloads.copyChecksum')}
+                    >
+                      {copiedChecksum ? (
+                        <Check className="h-4 w-4 text-green-500" />
+                      ) : (
+                        <Copy className="h-4 w-4 text-gray-500" />
+                      )}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
 
             {/* Release Notes Link */}
             <div className="text-center mt-8">

@@ -621,7 +621,9 @@
         "description": "Para departamentos de TI. Soporta instalación desatendida.",
         "button": "Descargar Silencioso"
       },
-      "releaseNotes": "Ver Notas de Versión"
+      "releaseNotes": "Ver Notas de Versión",
+      "checksum": "Verificación de Archivo (SHA-256)",
+      "copyChecksum": "Copiar checksum"
     },
     "requirements": {
       "title": "Requisitos del Sistema",
