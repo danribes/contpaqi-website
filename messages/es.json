@@ -447,7 +447,8 @@
       "careers": "Carreras",
       "privacy": "Política de Privacidad",
       "terms": "Términos de Servicio",
-      "license": "Acuerdo de Licencia"
+      "license": "Acuerdo de Licencia",
+      "refunds": "Política de Reembolso"
     },
     "rights": "Todos los derechos reservados.",
     "madeWith": "Hecho con amor para negocios mexicanos"
@@ -696,6 +697,10 @@
     },
     "privacy": {
       "title": "Política de Privacidad",
+      "lastUpdated": "Última actualización"
+    },
+    "refunds": {
+      "title": "Política de Reembolso",
       "lastUpdated": "Última actualización"
     }
   }

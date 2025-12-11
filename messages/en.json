@@ -447,7 +447,8 @@
       "careers": "Careers",
       "privacy": "Privacy Policy",
       "terms": "Terms of Service",
-      "license": "License Agreement"
+      "license": "License Agreement",
+      "refunds": "Refund Policy"
     },
     "rights": "All rights reserved.",
     "madeWith": "Made with love for Mexican businesses"
@@ -696,6 +697,10 @@
     },
     "privacy": {
       "title": "Privacy Policy",
+      "lastUpdated": "Last updated"
+    },
+    "refunds": {
+      "title": "Refund Policy",
       "lastUpdated": "Last updated"
     }
   }
