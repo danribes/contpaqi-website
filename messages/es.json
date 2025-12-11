@@ -188,6 +188,10 @@
         "5": {
           "question": "¿Hay prueba gratuita?",
           "answer": "¡Sí! Ofrecemos una prueba gratuita de 14 días con acceso completo a todas las funciones. No se requiere tarjeta de crédito para comenzar."
+        },
+        "6": {
+          "question": "¿Qué tipo de soporte ofrecen?",
+          "answer": "Todos los planes incluyen soporte por correo electrónico. Los planes Profesionales incluyen soporte prioritario con tiempo de respuesta de 24 horas. Los clientes Empresariales obtienen soporte dedicado con acceso telefónico e incorporación personalizada."
         }
       }
     },

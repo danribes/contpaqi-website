@@ -171,15 +171,15 @@
       "items": {
         "1": {
           "question": "Is my data secure?",
-          "answer": "Yes, all processing happens locally on your machine. Your invoice data never leaves your computer or gets sent to any cloud service."
+          "answer": "Yes, all processing happens locally on your machine. Your invoice data never leaves your computer or gets sent to any cloud service. We take data privacy seriously."
         },
         "2": {
           "question": "Which ContPAQi versions are supported?",
-          "answer": "We support ContPAQi Comercial and ContPAQi Contabilidad. The software integrates directly through the official ContPAQi SDK."
+          "answer": "We support ContPAQi Comercial and ContPAQi Contabilidad versions 2020 and later. The software integrates directly through the official ContPAQi SDK."
         },
         "3": {
           "question": "Do I need an internet connection?",
-          "answer": "Only for initial activation and software updates. Once activated, all AI processing works completely offline."
+          "answer": "Only for initial activation and software updates. Once activated, all AI processing works completely offline on your local machine."
         },
         "4": {
           "question": "What invoice formats are supported?",
@@ -188,6 +188,10 @@
         "5": {
           "question": "Is there a free trial?",
           "answer": "Yes! We offer a 14-day free trial with full access to all features. No credit card required to start."
+        },
+        "6": {
+          "question": "What kind of support do you offer?",
+          "answer": "All plans include email support. Professional plans include priority support with 24-hour response time. Enterprise customers get dedicated support with phone access and custom onboarding."
         }
       }
     },
