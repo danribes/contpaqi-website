@@ -309,6 +309,41 @@ EMAIL_FROM="ContPAQi AI Bridge <noreply@your-domain.com>"
 
 Proprietary - All rights reserved.
 
+## ContPAQi AI Bridge Desktop App Installation
+
+The ContPAQi AI Bridge desktop application requires Docker Desktop to run the AI services.
+
+### Prerequisites
+
+1. **Docker Desktop** (Required)
+   - Download from: https://www.docker.com/products/docker-desktop/
+   - System requirements:
+     - Windows 10/11 64-bit (Pro, Enterprise, or Education)
+     - WSL 2 backend enabled
+     - 4GB RAM minimum (8GB recommended)
+   - Install Docker Desktop and restart your computer
+   - Launch Docker Desktop and wait for it to start (whale icon in system tray should be steady)
+
+2. **Windows 10/11 (64-bit)**
+
+3. **.NET 6.0 Runtime** (usually included with Windows)
+
+### Installation Steps
+
+1. **Install Docker Desktop first** - The installer will check for Docker and won't proceed without it
+2. Download the installer from the [Download page](https://contpaqi-website.vercel.app/download) or directly from [GitHub Releases](https://github.com/danribes/contpaqi/releases)
+3. Run the installer as Administrator
+4. Follow the setup wizard
+5. Launch the application and activate your license
+
+### Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| "Docker Desktop: NOT INSTALLED" | Install Docker Desktop and ensure it's running before launching the installer |
+| Docker not starting | Enable WSL 2 in Windows Features, restart, then launch Docker Desktop |
+| Installer blocked by Windows | Click "More info" → "Run anyway" (this is normal for new software) |
+
 ## Related
 
 - [ContPAQi AI Bridge](https://github.com/danribes/contpaqi) - Main product repository
