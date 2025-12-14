@@ -21,7 +21,8 @@ import {
   BadgeCheck,
   Gauge,
   Layers,
-  Link2
+  Link2,
+  Download
 } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -54,13 +55,13 @@ export default function HomePage() {
                   {t('hero.subtitle')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-delay-4">
-                  <Link href="/pricing" className="btn-primary text-base px-8 py-4 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
+                  <Link href="/download" className="btn-primary text-base px-8 py-4 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
+                    <Download className="mr-2 h-5 w-5" />
+                    {t('hero.cta.download')}
+                  </Link>
+                  <Link href="/pricing" className="btn-secondary text-base px-8 py-4 hover:-translate-y-0.5 transition-all">
                     {t('hero.cta.primary')}
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                  <Link href="/features" className="btn-secondary text-base px-8 py-4 hover:-translate-y-0.5 transition-all">
-                    <Play className="mr-2 h-5 w-5" />
-                    {t('hero.cta.secondary')}
                   </Link>
                 </div>
                 <div className="flex flex-wrap items-center gap-6 pt-4 animate-fade-in-delay-5">
@@ -631,17 +632,18 @@ export default function HomePage() {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Link
-                  href="/pricing"
+                  href="/download"
                   className="inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 text-lg font-semibold text-brand-600 shadow-xl hover:bg-gray-100 hover:shadow-2xl transition-all hover:-translate-y-1"
+                >
+                  <Download className="mr-2 h-5 w-5" />
+                  {t('hero.cta.download')}
+                </Link>
+                <Link
+                  href="/pricing"
+                  className="inline-flex items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm border border-white/30 px-8 py-4 text-lg font-semibold text-white hover:bg-white/20 transition-all hover:-translate-y-1"
                 >
                   {t('cta.button')}
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm border border-white/30 px-8 py-4 text-lg font-semibold text-white hover:bg-white/20 transition-all hover:-translate-y-1"
-                >
-                  Contact Sales
                 </Link>
               </div>
 
