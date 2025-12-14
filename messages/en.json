@@ -2,6 +2,7 @@
   "nav": {
     "features": "Features",
     "pricing": "Pricing",
+    "download": "Download",
     "docs": "Docs",
     "contact": "Contact",
     "login": "Sign In",
@@ -16,6 +17,7 @@
       },
       "subtitle": "Let AI handle your invoice data entry. Extract data from PDFs in seconds, validate RFC compliance automatically, and post directly to ContPAQi while you focus on what matters.",
       "cta": {
+        "download": "Download Now",
         "primary": "Start Free Trial",
         "secondary": "Watch Demo"
       },
